@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Luca</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+
+    
+    <body>
+
+        <div class="ProductHeader">
+            <h1 id="lucaheader">
+                <img id="luca-header-title" src="images/luca-script-writing.png"/>
+            </h1>
+        </div>
+
+        <div class="product-wrapper">
+            
+            <!--<p id="lucaversioning">v1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last updated April 27, 2020</p>-->
+            <div class="above-separation"></div>
+
+            <div class="product-space">
+                <p class="product-header">Accessible financial data</p>
+                <p class="product-description">Luca provides historical financial data for any publically traded company that reports to the US Securities Excahnge Commission through a free-to-use REST API.  Below are several examples of financial statement data that Luca returns.</p>
+                <p class="centertitle">Return Data Structure:</p>
+                <img class="centerimg" src="images/luca-v1-data.PNG">
+                <p class="apiexample">{"header":{"symbol":"amzn","documentType":"10-K","periodEndDate":"2017-12-31T00:00:00"},"periodStart":"2017-01-01T00:00:00","periodEnd":"2017-12-31T00:00:00","revenue":null,"netIncome":3.033E+09,"assets":1.3131E+11,"liabilities":1.03601005E+11,"equity":2.7709E+10,"cash":2.0522E+10,"currentAssets":6.0197E+10,"currentLiabilities":5.7883E+10,"retainedEarnings":8.636E+09,"financialStatementGeneratedAtUtc":"2020-05-01T04:21:02.5184987Z"}</p>
+                <p class="apiexample">{"header":{"symbol":"GE","documentType":"10-K","periodEndDate":"2019-12-31T00:00:00"},"periodStart":"2019-01-01T00:00:00","periodEnd":"2019-12-31T00:00:00","revenue":9.5214E+10,"netIncome":-4.979E+09,"assets":2.66048E+11,"liabilities":2.36187E+11,"equity":2.8316E+10,"cash":null,"currentAssets":null,"currentLiabilities":null,"retainedEarnings":8.7732E+10,"financialStatementGeneratedAtUtc":"2020-04-27T03:36:53.1122485Z"}</p>
+                <p class="apiexample">{"header":{"symbol":"tsla","documentType":"10-K","periodEndDate":"2019-12-31T00:00:00"},"periodStart":"2019-01-01T00:00:00","periodEnd":"2019-12-31T00:00:00","revenue":2.4578E+10,"netIncome":-862000000.0,"assets":3.4309E+10,"liabilities":2.6199E+10,"equity":6.618E+09,"cash":6.2680003E+09,"currentAssets":1.2103E+10,"currentLiabilities":1.0667E+10,"retainedEarnings":-6.083E+09,"financialStatementGeneratedAtUtc":"2020-04-28T21:59:37.2686262Z"}</p>
+            </div>
+
+            <p class="lucatitle">Documentation</p>
+            <div class="product-space">
+                <p class="product-description-sub">All API calls are made via an HTTP GET request.</p>
+                <p class="product-description-sub">Base URL:</p>
+                <p id="apibaseurl">https://projectluca.azurewebsites.net/api/GetFinancials</p>
+
+                <p class="product-description-sub above-separation">Parameter #1 - symbol</p>
+                <p class="required-parameter">required</p>
+                <p class="small-text">The trading symbol of the company that you are requesting.  i.e. AAPL, MSFT, GOOG.  Examples:</p>
+                <div id="horizontalstack">
+                    <p class="apiexample-fit">symbol=msft</p>
+                    <p class="apiexample-fit">symbol=intc</p>
+                    <p class="apiexample-fit">symbol=aapl</p>
+                    <p class="apiexample-fit">symbol=goog</p>
+                </div>
+
+
+                <p class="product-description-sub above-separation">Parameter #2 - filing</p>
+                <p class="required-parameter">required</p>
+                <p class="small-text">Designates the time period your are requesting.  10-K filings are annual filings, meaning that the period-focused data (i.e. revenue, net income) are over the course of 12 months.  10-Q filings are quarterly, over a 3 month period.</p>
+                <p class="small-text">You have two options to choose from: <b>10k</b> for an annual data, or <b>10q</b> for quarterly data.</p>
+                <div id="horizontalstack">
+                    <p class="apiexample-fit">filing=10k</p>
+                    <p class="apiexample-fit">filing=10q</p>
+                </div>
+
+                <p class="product-description-sub above-separation">Parameter #3 - before</p>
+                <p class="small-text">If you would like to get a filing that happened before a specific date, use the 'before' parameter.  For example, if I wanted to get the most recent annual filing as of May 1, 2018, I would specify that here.</p>
+                <p class="small-text">Dates are in the <b>MMDDYYYY</b> format.  (i.e. May 1, 2020 would be '05012020')</p>
+                <p class="small-text">This parameter is optional.  If not provided, you will have the latest requested document returned to you.</p>
+                <div id="horizontalstack">
+                    <p class="apiexample-fit">before=01012017</p>
+                    <p class="apiexample-fit">before=07012019</p>
+                    <p class="apiexample-fit">before=05012018</p>
+                </div>
+
+
+                <p class="product-description-sub above-separation">Parameter #4 - forcecalculation</p>
+                <p class="small-text">Luca maintains a financial data cache.  This cache uses previously calculated data to eliminate unnecessary processing time and drastically reduce the call response time.  If you do not want to use this cache and would like to force the system to access the source documentation from the SEC directly, use this parameter.</p>
+                <p class="small-text">You have two options to choose from: <b>true</b> and <b>false</b>.  If omitted, the parameter will default to false.</p>
+                <div id="horizontalstack">
+                    <p class="apiexample-fit">forcecalculation=true</p>
+                    <p class="apiexample-fit">forcecalculation=false</p>
+                </div>
+
+
+                <p class="product-description-sub above-separation">Full request examples (all are GET requests):</p>
+                <p class="small-text">Requesting the latest 10-K report from Microsoft:</p>
+                <p class="apiexample-fit">https://projectluca.azurewebsites.net/api/GetFinancials?symbol=msft&filing=10k</p>
+            
+                <div class="above-separation-small"></div>
+                <p class="small-text">Requesting the most recent 10-Q (quarterly) filing from Amazon as of January 1, 2018 (will return a 10-K filed in 2017)</p>
+                <p class="apiexample-fit">https://projectluca.azurewebsites.net/api/GetFinancials?symbol=amzn&filing=10q&before=01012018</p>
+            
+                <div class="above-separation-small"></div>
+                <p class="small-text">Requesting the latest 10-K filing from Tesla and forcing the data to be freshly-sourced from the SEC database:</p>
+                <p class="apiexample-fit">https://projectluca.azurewebsites.net/api/GetFinancials?symbol=tsla&filing=10k&forcecalculation=true</p>
+            
+            
+            </div>
+
+
+            <p class="lucatitle">Peripheral Data</p>
+            <div class="product-space">
+                <p class="small-text">Luca also provides several peripheral functions to supply contextual data about the system itself.</p>
+                <p class="small-text">Get current system version:</p>
+                <p class="apiexample-fit">https://projectluca.azurewebsites.net/api/GetVersion</p>
+                <p class="small-text">Get last system update time:</p>
+                <p class="apiexample-fit">https://projectluca.azurewebsites.net/api/GetLastUpdateDateTime</p>
+            </div>
+            
+            <p class="lucatitle">Solution Architecture - how it works</p>
+            <div class="product-space">
+                <p class="medium-text">Luca uses several cloud services provided by Microsoft Azure.  Behind the scenes, Luca is leveraring the serverless compute power of <b>Azure Functions</b> to respond to incoming API calls.  Azure <b>Blob Storage</b> is used as a database to cache financial data.</p>
+                <div class="above-separation"></div>
+                <img class="centerimg full-border" src="images/luca-flow.png">
+                <div class="above-separartion"></div>
+                <p class="medium-text">The process of querying the SEC database, parsing the documentation into a class definition, and then converting this to a financial statement can be very time consuming.  Depending on many variables such as the size of the filing document, this process can take anywhere between 5 secons to 4 minutes.  To alleviate this wait time, Luca uses a data caching method that can be followed in the flow chart seen above.</p>
+                <div class="above-separation-small"></div>
+                <p class="medium-text">Upon a new request being received, the repository of financial data stored in Azure blob storage is checked first.  If there is a a cached item that meets the specified criteria, this item is further examined.  If this financial statement was generated after the most recent system update of Luca, this data is returned.  This process ensures that you will never be returned data that was not retrieved by the latest version of Luca.</p>
+                <div class="above-separation-small"></div>
+                <p class="medium-text">If data that meets the request was not found in azure or data was found but it was not up to date, a separate process is launched to gather the financial statement data from the SEC database directly.  First, the SEC database is queried and the appropriate filing document is downloaded that meets the specified criteria.  After download, the document is parsed into a class definition containing all included financial data.  A separate class definition is then created and uses commonly used keywords to determine which data from the document correspond to data point in the returned object.  This resulting object - the common financial statement - is then saved to Azure blob storage to be used for future requests; this ensures that the from-scratch sourcing does not need to occur multiple times.  Finally, this financial statement data is returned to the caller.</p>
+            </div>
+            
+
+        </div>
+
+        
+
+    </body>
+
+    
+</html>
