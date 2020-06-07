@@ -24,11 +24,11 @@
             <div class="product-space">
                 <p class="product-header">Accessible financial data</p>
                 <p class="product-description">Luca provides historical financial data for any publically traded company that reports to the US Securities Exchange Commission through a free-to-use REST API.  Below are several examples of financial statement data that Luca returns.</p>
-                <p class="centertitle">Return Data Structure:</p>
-                <img class="centerimg" src="images/luca-v1-data.PNG">
-                <p class="apiexample">{"header":{"symbol":"amzn","documentType":"10-K","periodEndDate":"2017-12-31T00:00:00"},"periodStart":"2017-01-01T00:00:00","periodEnd":"2017-12-31T00:00:00","revenue":null,"netIncome":3.033E+09,"assets":1.3131E+11,"liabilities":1.03601005E+11,"equity":2.7709E+10,"cash":2.0522E+10,"currentAssets":6.0197E+10,"currentLiabilities":5.7883E+10,"retainedEarnings":8.636E+09,"financialStatementGeneratedAtUtc":"2020-05-01T04:21:02.5184987Z"}</p>
-                <p class="apiexample">{"header":{"symbol":"GE","documentType":"10-K","periodEndDate":"2019-12-31T00:00:00"},"periodStart":"2019-01-01T00:00:00","periodEnd":"2019-12-31T00:00:00","revenue":9.5214E+10,"netIncome":-4.979E+09,"assets":2.66048E+11,"liabilities":2.36187E+11,"equity":2.8316E+10,"cash":null,"currentAssets":null,"currentLiabilities":null,"retainedEarnings":8.7732E+10,"financialStatementGeneratedAtUtc":"2020-04-27T03:36:53.1122485Z"}</p>
-                <p class="apiexample">{"header":{"symbol":"tsla","documentType":"10-K","periodEndDate":"2019-12-31T00:00:00"},"periodStart":"2019-01-01T00:00:00","periodEnd":"2019-12-31T00:00:00","revenue":2.4578E+10,"netIncome":-862000000.0,"assets":3.4309E+10,"liabilities":2.6199E+10,"equity":6.618E+09,"cash":6.2680003E+09,"currentAssets":1.2103E+10,"currentLiabilities":1.0667E+10,"retainedEarnings":-6.083E+09,"financialStatementGeneratedAtUtc":"2020-04-28T21:59:37.2686262Z"}</p>
+                <p class="centertitle">Data Packet Structure:</p>
+                <img class="centerimg" src="images/lucapacketv3.PNG">
+                <p class="apiexample">{"Header":{"Symbol":"MSFT","DocumentType":"10-K","PeriodEndDate":"2019-06-30T00:00:00"},"PeriodStart":"2018-07-01T00:00:00","PeriodEnd":"2019-06-30T00:00:00","Revenue":1.25843E+11,"NetIncome":3.924E+10,"Assets":2.86556E+11,"Liabilities":1.84226E+11,"Equity":1.0233E+11,"Cash":1.1356E+10,"CurrentAssets":1.75552E+11,"CurrentLiabilities":6.942E+10,"RetainedEarnings":2.415E+10,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:13:54.3373388Z","OperatingCashFlows":5.2185E+10,"InvestingCashFlows":-1.5773E+10,"FinancingCashFlows":-3.6887E+10}</p>
+                <p class="apiexample">{"Header":{"Symbol":"amzn","DocumentType":"10-Q","PeriodEndDate":"2017-09-30T00:00:00"},"PeriodStart":"2017-01-01T00:00:00","PeriodEnd":"2017-09-30T00:00:00","Revenue":1.17413E+11,"NetIncome":1.176E+09,"Assets":1.15267E+11,"Liabilities":9.0609E+10,"Equity":2.4658E+10,"Cash":1.2767E+10,"CurrentAssets":4.8578E+10,"CurrentLiabilities":4.7072002E+10,"RetainedEarnings":6.779E+09,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:17:52.8952058Z","OperatingCashFlows":6.09E+09,"InvestingCashFlows":-2.5787E+10,"FinancingCashFlows":1.2507E+10}</p>
+                <p class="apiexample">{"Header":{"Symbol":"tsla","DocumentType":"10-K","PeriodEndDate":"2019-12-31T00:00:00"},"PeriodStart":"2019-01-01T00:00:00","PeriodEnd":"2019-12-31T00:00:00","Revenue":2.4578E+10,"NetIncome":-862000000.0,"Assets":3.4309E+10,"Liabilities":2.6199E+10,"Equity":6.618E+09,"Cash":6.2680003E+09,"CurrentAssets":1.2103E+10,"CurrentLiabilities":1.0667E+10,"RetainedEarnings":-6.083E+09,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:18:54.8788274Z","OperatingCashFlows":2.405E+09,"InvestingCashFlows":-1.436E+09,"FinancingCashFlows":1.5289999E+09}</p>
             </div>
 
             <p class="lucatitle">Documentation</p>
@@ -114,7 +114,10 @@
                 <div class="above-separation-small"></div>
                 <p class="medium-text">If data that meets the request was not found in azure or data was found but it was not up to date, a separate process is launched to gather the financial statement data from the SEC database directly.  First, the SEC database is queried and the appropriate filing document is downloaded that meets the specified criteria.  After download, the document is parsed into a class definition containing all included financial data.  A separate class definition is then created and uses commonly used keywords to determine which data from the document correspond to data point in the returned object.  This resulting object - the common financial statement - is then saved to Azure blob storage to be used for future requests; this ensures that the from-scratch sourcing does not need to occur multiple times.  Finally, this financial statement data is returned to the caller.</p>
             </div>
-            
+
+
+            <p class="lucatitle">Version Notes</p>
+            <p class="medium-text">v3 (June 7, 2020) - Added Cash Flow properties and improved exception handling and surfacing.</p>
 
         </div>
 
