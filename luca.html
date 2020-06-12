@@ -25,10 +25,11 @@
                 <p class="product-header">Accessible financial data</p>
                 <p class="product-description">Luca provides historical financial data for any publically traded company that reports to the US Securities Exchange Commission through a free-to-use REST API.  Below are several examples of financial statement data that Luca returns.</p>
                 <p class="centertitle">Data Packet Structure:</p>
-                <img class="centerimg" src="images/lucapacketv3.PNG">
-                <p class="apiexample">{"Header":{"Symbol":"MSFT","DocumentType":"10-K","PeriodEndDate":"2019-06-30T00:00:00"},"PeriodStart":"2018-07-01T00:00:00","PeriodEnd":"2019-06-30T00:00:00","Revenue":1.25843E+11,"NetIncome":3.924E+10,"Assets":2.86556E+11,"Liabilities":1.84226E+11,"Equity":1.0233E+11,"Cash":1.1356E+10,"CurrentAssets":1.75552E+11,"CurrentLiabilities":6.942E+10,"RetainedEarnings":2.415E+10,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:13:54.3373388Z","OperatingCashFlows":5.2185E+10,"InvestingCashFlows":-1.5773E+10,"FinancingCashFlows":-3.6887E+10}</p>
-                <p class="apiexample">{"Header":{"Symbol":"amzn","DocumentType":"10-Q","PeriodEndDate":"2017-09-30T00:00:00"},"PeriodStart":"2017-01-01T00:00:00","PeriodEnd":"2017-09-30T00:00:00","Revenue":1.17413E+11,"NetIncome":1.176E+09,"Assets":1.15267E+11,"Liabilities":9.0609E+10,"Equity":2.4658E+10,"Cash":1.2767E+10,"CurrentAssets":4.8578E+10,"CurrentLiabilities":4.7072002E+10,"RetainedEarnings":6.779E+09,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:17:52.8952058Z","OperatingCashFlows":6.09E+09,"InvestingCashFlows":-2.5787E+10,"FinancingCashFlows":1.2507E+10}</p>
-                <p class="apiexample">{"Header":{"Symbol":"tsla","DocumentType":"10-K","PeriodEndDate":"2019-12-31T00:00:00"},"PeriodStart":"2019-01-01T00:00:00","PeriodEnd":"2019-12-31T00:00:00","Revenue":2.4578E+10,"NetIncome":-862000000.0,"Assets":3.4309E+10,"Liabilities":2.6199E+10,"Equity":6.618E+09,"Cash":6.2680003E+09,"CurrentAssets":1.2103E+10,"CurrentLiabilities":1.0667E+10,"RetainedEarnings":-6.083E+09,"FinancialStatementGeneratedAtUtc":"2020-06-07T18:18:54.8788274Z","OperatingCashFlows":2.405E+09,"InvestingCashFlows":-1.436E+09,"FinancingCashFlows":1.5289999E+09}</p>
+                <img class="centerimg" src="images/lucapacketv4.PNG">
+                <p class="product-header">Example Responses</p>
+                <p class="apiexample">{"Header":{"Symbol":"msft","DocumentType":"10-K","PeriodEndDate":"2019-06-30T00:00:00"},"PeriodStart":"2018-07-01T00:00:00","PeriodEnd":"2019-06-30T00:00:00","InaccuracyRiskFlag":false,"Revenue":1.25843E+11,"NetIncome":3.924E+10,"Assets":2.86556E+11,"Liabilities":1.84226E+11,"Equity":1.0233E+11,"Cash":1.1356E+10,"CurrentAssets":1.75552E+11,"CurrentLiabilities":6.942E+10,"RetainedEarnings":2.415E+10,"FinancialStatementGeneratedAtUtc":"2020-06-12T19:54:30.5135174Z","OperatingCashFlows":5.2185E+10,"InvestingCashFlows":-1.5773E+10,"FinancingCashFlows":-3.6887E+10}</p>
+                <p class="apiexample">{"Header":{"Symbol":"amzn","DocumentType":"10-Q","PeriodEndDate":"2017-09-30T00:00:00"},"PeriodStart":"2017-01-01T00:00:00","PeriodEnd":"2017-09-30T00:00:00","InaccuracyRiskFlag":true,"Revenue":1.17413E+11,"NetIncome":1.176E+09,"Assets":1.15267E+11,"Liabilities":9.0609E+10,"Equity":2.4658E+10,"Cash":1.2767E+10,"CurrentAssets":4.8578E+10,"CurrentLiabilities":4.7072002E+10,"RetainedEarnings":6.779E+09,"FinancialStatementGeneratedAtUtc":"2020-06-12T20:00:02.5654783Z","OperatingCashFlows":6.09E+09,"InvestingCashFlows":-2.5787E+10,"FinancingCashFlows":1.2507E+10}</p>
+                <p class="apiexample">{"Header":{"Symbol":"tsla","DocumentType":"10-K","PeriodEndDate":"2019-12-31T00:00:00"},"PeriodStart":"2019-01-01T00:00:00","PeriodEnd":"2019-12-31T00:00:00","InaccuracyRiskFlag":false,"Revenue":2.4578E+10,"NetIncome":-862000000.0,"Assets":3.4309E+10,"Liabilities":2.6199E+10,"Equity":6.618E+09,"Cash":6.2680003E+09,"CurrentAssets":1.2103E+10,"CurrentLiabilities":1.0667E+10,"RetainedEarnings":-6.083E+09,"FinancialStatementGeneratedAtUtc":"2020-06-12T20:07:18.1711985Z","OperatingCashFlows":2.405E+09,"InvestingCashFlows":-1.436E+09,"FinancingCashFlows":1.5289999E+09}</p>
             </div>
 
             <p class="lucatitle">Documentation</p>
@@ -118,7 +119,12 @@
 
             <p class="lucatitle">Version Notes</p>
             <p class="medium-text">v3 (June 7, 2020) - Added Cash Flow properties and improved exception handling and surfacing.</p>
-
+            <p class="medium-text">v4 (June 12, 2020) - Added the 'InaccuracyRiskFlag' property to the data packet. This indicates that a possible error with the XBRL filing was detected and the document may contain errors.</p>
+            
+            <div class="above-separation"></div>
+            <div class="above-separation"></div>
+            <p class="light-disclaimer">Disclaimer</p>
+            <p class="light-disclaimer">Tim Hanewich assumes no responsibility or liability for any errors or omissions in the content of this service. The information contained in this site is provided on an "as is" basis with no guarentees of completeness, accuracy, usefulness, or timeliness and without any warranties of any kind whatsoever, express or implied.  Tim Hanewich does not warrant that this site and any information or material downloaded from this site will be uninterrupted, error-free, or omission-free.</p>
         </div>
 
         

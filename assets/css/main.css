@@ -3457,3 +3457,14 @@ input, select, textarea {
 	margin: 0px;
 	padding-bottom: 0px;
 }
+
+.light-disclaimer
+{
+	text-align: center;
+	font-size: 13px;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	color: lightgray;
+	font-weight: lighter;
+	line-height: normal;
+}
