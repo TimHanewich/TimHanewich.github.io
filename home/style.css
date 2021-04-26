@@ -8,8 +8,12 @@ body
 #bg
 {
     width: 100%;
+    height: 100%;
     background-color: royalblue;
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
 }
 
 .bg-img
@@ -31,3 +35,56 @@ body
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+#welcome
+{
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+
+.opening
+{
+    z-index: 1;
+    position: relative;
+    color: whitesmoke;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title
+{
+    font-size: 40px;
+    text-align: center;
+}
+
+.blurb
+{
+    font-size: 22px;
+    text-align: left;
+}
+
+.headshot
+{
+    width: 17%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.social-drawer
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    margin-top: 18px;
+}
+
