@@ -1,0 +1,33 @@
+body
+{
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+}
+
+#bg
+{
+    width: 100%;
+    background-color: royalblue;
+    position: relative;
+}
+
+.bg-img
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bg-f
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
