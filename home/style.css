@@ -283,3 +283,28 @@ body
     margin-left: auto;
     margin-right: auto;
 }
+
+.tech-used-title
+{
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.tech-used-pane
+{
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tech-used-logo
+{
+    width: 80px;
+    object-fit: contain;
+    display: inline-block;
+    margin-right: 15px;
+}
+
