@@ -91,11 +91,11 @@ body
 
 .sections-gr
 {
-    width: 70%;
+    width: 80%;
     height: 25px;
     display: grid;
-    grid-template-areas: "t1 t2 t3 t4";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "t1 t2 t3 t4 t5";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
