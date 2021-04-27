@@ -149,6 +149,21 @@ body
     margin-right: 5px;
 }
 
+.skill-key-desc
+{
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 9px;
+    margin-right: 5px;
+}
+
 /* Skills palet from https://coolors.co/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-90e0ef-ade8f4-caf0f8 */
 .s-lvl-1
 {
