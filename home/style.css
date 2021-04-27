@@ -147,6 +147,7 @@ body
     margin-left: 0px;
     margin-bottom: 9px;
     margin-right: 5px;
+    position: relative;
 }
 
 .skill-key-desc
@@ -197,5 +198,25 @@ body
     margin-left: auto;
     margin-right: auto;
     width: max-content;
+}
+
+.skill-tool-tip
+{
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    z-index: 1;
+    width: max-content;
+    border-radius: 10px;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.show-skill-tool-tip
+{
+    visibility: visible;
 }
 
