@@ -42,9 +42,10 @@ body
     top: 0px;
     left: 0px;
     position: relative;
+    overflow-y: hidden;
 }
 
-.opening
+#opening
 {
     z-index: 1;
     position: relative;
