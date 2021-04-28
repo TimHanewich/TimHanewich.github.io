@@ -308,3 +308,10 @@ body
     margin-right: 15px;
 }
 
+.earnings-alley-project-title
+{
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: rgb(29, 161, 242);
+}
