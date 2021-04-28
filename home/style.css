@@ -479,3 +479,32 @@ body
 	margin-right: auto;
 	text-align: center;
 }
+
+.school-title
+{
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+    color: rgb(181, 152, 90);
+}
+
+.school-degree
+{
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 7px;
+}
+
+.school-distinction
+{
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin: 0px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
