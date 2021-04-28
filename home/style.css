@@ -410,3 +410,54 @@ body
     text-decoration: none;
     border: none;
 }
+
+.cert-grid
+{
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 9em 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 9em;
+    margin-bottom: 2
+    5px;
+}
+
+.cert-badge
+{
+    width: 8em;
+    height: 8em;
+}
+
+.cert-content-cont
+{
+    width: 100%;
+    height: 100%;
+    grid-area: "right";
+}
+
+.cert-content
+{
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cert-title
+{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.cert-desc
+{
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    color: gray;
+}
