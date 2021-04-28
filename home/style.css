@@ -1,3 +1,8 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     left: 0px;
@@ -117,6 +122,12 @@ body
     border-bottom-width: 0px;
     box-sizing: border-box;
     text-transform: lowercase;
+}
+
+.mo-tab
+{
+    color: rgb(181, 152, 90);
+    font-weight: bold;
 }
 
 
@@ -373,4 +384,11 @@ body
     transform: translateY(40%);
     width: 150px;
     margin-left: 5px;
+}
+
+.tab-no-decor
+{
+    color: unset;
+    text-decoration: none;
+    border: none;
 }
