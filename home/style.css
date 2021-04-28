@@ -130,6 +130,24 @@ body
     font-weight: bold;
 }
 
+.tab-disabled
+{
+    height: 100%;
+    width: 100%;
+    font-size: 23px;
+    line-height: 25px;
+    text-align: center;
+    border-color: rgb(181, 152, 90);
+    border-style: solid;
+    border-left-width: 0.01px;
+    border-right-width: 0.01px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+    color: gray;
+}
+
 
 .section-title
 {
