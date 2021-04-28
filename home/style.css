@@ -315,3 +315,62 @@ body
     margin-bottom: 10px;
     color: rgb(29, 161, 242);
 }
+
+.writing-grid
+{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "img content";
+    grid-template-columns: 0% 100%;
+}
+
+.writing-desc-content
+{
+    grid-area: content;
+    width: 100%;
+}
+
+.writing-title
+{
+    font-size: 27px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.writing-desc
+{
+    margin: 0px;
+    font-size: 18px;
+}
+
+.art-img
+{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.published-by
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    font-size: 20px;
+}
+
+.writing-published-at
+{
+    color: gray;
+    font-size: 15px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+.published-by-tds
+{
+    transform: translateY(40%);
+    width: 150px;
+    margin-left: 5px;
+}
