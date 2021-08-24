@@ -1,3 +1,8 @@
+*
+{
+    color: #F6F1F1;
+}
+
 body
 {
     margin: 0px;
@@ -5,11 +10,14 @@ body
 
 .bg-img-cont
 {
+    top: 0px;
     z-index: -10;
+    position: fixed;
 }
 
 .bg-img
 {
+    top: 0px;
     position: fixed;
     margin: 0px;
     height: 100%;
@@ -19,8 +27,28 @@ body
 
 .bg-img-cover
 {
+    top: 0px;
     position: fixed;
-    background-color: rgba(1, 0, 55, 0.4);
+    background-color: rgba(1, 0, 55, 0.45);
     height: 100%;
     width: 100%;
+}
+
+.pg-title
+{
+    text-align: center;
+    font-size: 48px;
+}
+
+.center-cont
+{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p
+{
+    font-size: 21px;
 }
