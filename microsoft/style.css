@@ -1,0 +1,26 @@
+body
+{
+    margin: 0px;
+}
+
+.bg-img-cont
+{
+    z-index: -10;
+}
+
+.bg-img
+{
+    position: fixed;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bg-img-cover
+{
+    position: fixed;
+    background-color: rgba(1, 0, 55, 0.4);
+    height: 100%;
+    width: 100%;
+}
