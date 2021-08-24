@@ -97,43 +97,32 @@ body
 
 .sections-gr
 {
-    width: 80%;
+    position: relative;
     height: 25px;
-    display: grid;
-    grid-template-areas: "t1 t2 t3";
-    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+    margin-top: 40px;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
-}
-
-.sections-gr-2
-{
-    width: 80%;
-    height: 25px;
-    display: grid;
-    grid-template-areas: "t1 t2";
-    grid-template-columns: 1fr 1fr;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
 }
 
 .tab
 {
+    position: relative;
     height: 100%;
-    width: 100%;
+    width: 12vw;
     font-size: 23px;
     line-height: 25px;
     text-align: center;
+    box-sizing: border-box;
+    text-transform: lowercase;
+
     border-color: rgb(181, 152, 90);
     border-style: solid;
     border-left-width: 0.01px;
     border-right-width: 0.01px;
     border-top-width: 0px;
     border-bottom-width: 0px;
-    box-sizing: border-box;
-    text-transform: lowercase;
 }
 
 .mo-tab
