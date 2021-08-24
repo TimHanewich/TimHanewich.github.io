@@ -75,3 +75,9 @@ p
     margin-top: 0px;
     margin-bottom: 10px;
 }
+
+.sol-img
+{
+    position: relative;
+    width: 100%;
+}
