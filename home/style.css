@@ -547,3 +547,10 @@ body
     border-left-width: 0px;
     border-right-width: 0px;
 }
+
+.body-txt
+{
+    font-size: 19px;
+    text-align: left;
+    color: #4A4E69;
+}
