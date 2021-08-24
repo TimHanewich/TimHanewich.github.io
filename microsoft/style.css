@@ -66,10 +66,12 @@ p
     font-size: 26px;
     color: #E7DCC6;
     margin-top: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .proj-desc
 {
     font-size: 19px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
