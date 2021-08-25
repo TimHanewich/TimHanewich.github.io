@@ -81,3 +81,11 @@ p
     position: relative;
     width: 100%;
 }
+
+.proj-cont
+{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
