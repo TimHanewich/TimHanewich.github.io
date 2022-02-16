@@ -41,3 +41,15 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.badges-title
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.badges-desc
+{
+    margin-top: 0px;
+    font-size: 18px;
+}
