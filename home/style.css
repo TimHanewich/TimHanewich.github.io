@@ -539,3 +539,14 @@ body
     text-align: left;
     color: #4A4E69;
 }
+
+li
+{
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+a
+{
+    color: #4F56D5;
+}
