@@ -1,16 +1,25 @@
 ## Late 2023 Refresh
 - Projects to feature
-    - Scout
-    - Mecanum Rover
-    - Aletheia
+    - Robotics
+        - Scout
+        - Mecanum Rover
+    - Financial
+        - Aletheia
+        - XBRL parsing library
+    - IoT
+        - Temperature/Humidity Smart Home project
+        - IoT Air Quality Project
+        - Lights under bed server
+        - Smart jacket lighting
+        - Smart motorcycle cases
     - Apex Visual
-    - Temperature/Humidity Smart Home project
-    - TimHanewich.Dataverse
-    - Ride Along GPS on Motorcycle
-    - Automated chess bot
-    - IoT Air Quality Project
-    - Lights under bed server
-    - Smart jacket lighting
-    - Smart motorcycle cases
-    - MIDI file to WS2812B coordination
-    - WS2812B spatial
+    - Artificial Intelligence
+        - Automated chess bot
+        - IRIS/CHASE?
+        - NN to predict baseball games odds
+        - Wrote my own NN: predicting arrest/frisk in seattle
+    - Misc
+        - TimHanewich.Dataverse
+        - Ride Along GPS on Motorcycle
+        - MIDI file to WS2812B coordination
+        - WS2812B spatial
