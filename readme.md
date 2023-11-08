@@ -1,0 +1,16 @@
+## Late 2023 Refresh
+- Projects to feature
+    - Scout
+    - Mecanum Rover
+    - Aletheia
+    - Apex Visual
+    - Temperature/Humidity Smart Home project
+    - TimHanewich.Dataverse
+    - Ride Along GPS on Motorcycle
+    - Automated chess bot
+    - IoT Air Quality Project
+    - Lights under bed server
+    - Smart jacket lighting
+    - Smart motorcycle cases
+    - MIDI file to WS2812B coordination
+    - WS2812B spatial
