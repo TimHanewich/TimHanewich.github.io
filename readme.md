@@ -16,7 +16,7 @@
         - MIDI file to WS2812B coordination
         - WS2812B spatial
     - Artificial Intelligence
-        - Automated chess bot
+        - Automated chess bot & TimHanewich.Chess nuget
         - IRIS/CHASE?
         - NN to predict baseball games odds
         - Wrote my own NN: predicting arrest/frisk in seattle
@@ -24,4 +24,5 @@
         - Apex Visual
         - TimHanewich.Dataverse
         - Ride Along GPS on Motorcycle
+        - PowerSource?
         
