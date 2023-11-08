@@ -6,6 +6,7 @@
     - Financial
         - Aletheia
         - XBRL parsing library
+        - SEC EDGAR library
     - IoT
         - Temperature/Humidity Smart Home project
         - IoT Air Quality Project
