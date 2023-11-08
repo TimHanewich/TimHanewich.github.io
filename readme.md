@@ -12,14 +12,15 @@
         - Lights under bed server
         - Smart jacket lighting
         - Smart motorcycle cases
-    - Apex Visual
+        - MIDI file to WS2812B coordination
+        - WS2812B spatial
     - Artificial Intelligence
         - Automated chess bot
         - IRIS/CHASE?
         - NN to predict baseball games odds
         - Wrote my own NN: predicting arrest/frisk in seattle
-    - Misc
+    - Software
+        - Apex Visual
         - TimHanewich.Dataverse
         - Ride Along GPS on Motorcycle
-        - MIDI file to WS2812B coordination
-        - WS2812B spatial
+        
