@@ -550,3 +550,73 @@ a
 {
     color: #4F56D5;
 }
+
+.other-project
+{
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    height: 128px;
+    width: 384px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    border-color: gray;
+    border-width: 3px;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.op-img-cont
+{
+    grid-column: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.op-img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.op-desc-cont
+{
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.op-title
+{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.op-desc
+{
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.op-link
+{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.opc
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
