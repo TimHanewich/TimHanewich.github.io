@@ -18,5 +18,6 @@ Site available here: [https://timhanewich.github.io](https://timhanewich.github.
 - baseball betting neural net
 - bed light server
 - SecuritiesExchangeCommision.Edgar
+- xbrl
 
 
