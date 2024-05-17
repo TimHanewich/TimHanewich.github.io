@@ -574,9 +574,12 @@ a
 
 .op-img
 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     height: 100%;
     width: 100%;
     object-fit: contain;
+    max-height: 128px; /*Will need to change this according to the width of the column containing the parent div (if that changes)*/
 }
 
 .op-desc-cont
