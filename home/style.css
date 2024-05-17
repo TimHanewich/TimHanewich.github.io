@@ -615,6 +615,9 @@ a
     display: inline-block;
     margin: 5px;
     cursor: pointer;
+    outline: none;
+    text-decoration-style: none;
+    border-bottom: 0px;
 }
 
 .opc
