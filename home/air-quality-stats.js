@@ -36,18 +36,21 @@ xhr.onload = function() {
         {
             aqitxt = "Unhealthy";
         }
-        $("#aqs-aqi").html("Air Quality Rating: <b>" + aqitxt + "</b>")
+        $("#aqs-aqi").html("Air Quality Rating: <b>" + aqitxt + "</b>");
+
+        // The stat display is normally hidden, so who it since we were able to get data!
+        $("#eaq-telemetry").css("display", "");
 
     }
     else 
     {
-        ("#eaq-telemetry").hide()
+        $("#eaq-telemetry").hide();
     }
 };
 
 xhr.onerror = function() 
 {
-    ("#eaq-telemetry").hide()
+    $("#eaq-telemetry").hide();
 };
 
 xhr.send();
