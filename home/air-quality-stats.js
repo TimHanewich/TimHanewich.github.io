@@ -41,12 +41,13 @@ xhr.onload = function() {
     }
     else 
     {
-    console.error('Request failed. Returned status of'+ xhr.status);
+        ("#eaq-telemetry").hide()
     }
 };
 
-xhr.onerror = function() {
-  console.error('Request failed');
+xhr.onerror = function() 
+{
+    ("#eaq-telemetry").hide()
 };
 
 xhr.send();
