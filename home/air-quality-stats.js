@@ -38,6 +38,20 @@ xhr.onload = function() {
         }
         $("#aqs-aqi").html("Air Quality Rating: <b>" + aqitxt + "</b>");
 
+        // Time elapsed since it was last sampled
+        const sampledUTC = new Date(data.sampled);
+        const timeDiff = new Date().getTime() - sampledUTC;
+        if (timeDiff < 60000) // it was taken less than a minute ago, so show seconds
+        {
+            const timeDiffSeconds = timeDiff / 1000
+            $("#aqs-sampled").html("Data sampled " + timeDiffSeconds.toFixed(0) + " second(s) ago");
+        }
+        else // it was taken more than a minute ago, so show minutes
+        {
+            const timeDiffMinutes = timeDiff / (1000 * 60);
+            $("#aqs-sampled").html("Data sampled " + timeDiffMinutes.toFixed(0) + " minute(s) ago");
+        }
+
         // The stat display is normally hidden, so who it since we were able to get data!
         $("#eaq-telemetry").css("display", "");
 
