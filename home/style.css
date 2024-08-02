@@ -626,3 +626,20 @@ a
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#eaq-telemetry
+{
+    position: relative;
+    width: 60%;
+    background-color: #90e0ef;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.aq-stat
+{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
