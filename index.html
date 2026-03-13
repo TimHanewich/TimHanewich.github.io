@@ -1,695 +1,547 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="home/style.css">
-        <link rel="stylesheet" href="assets/css/common.css">
-        <link rel="stylesheet" href="assets/css/social.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Hanewich — Builder, Engineer, Creator</title>
+    <meta name="description" content="Personal portfolio of Tim Hanewich. AI agents, autonomous robots, open-source tools, and more.">
+    <link rel="icon" type="image/svg" href="./images/White_Circle.svg">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="style.css">
 
-        <!--Title and favicon-->
-        <title>Tim Hanewich</title>
-        <link rel="icon" type="image/svg" href="./images/White_Circle.svg">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jkdkwrhsai");
+    </script>
+</head>
+<body>
 
-        <!--Microsoft Clarity tag-->
-        <script type="text/javascript">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "jkdkwrhsai");
-        </script>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">TH</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars" id="navIcon"></i>
+        </button>
+    </nav>
 
-    </head>
-    <body>
-
-        <!--WELCOME-->
-        <div id="welcome" style="height: 300px;">
-
-            <!--Background image-->
-            <div id="bg">
-                <img class="bg-img" src="home/night-blur.jpg">
-                <div class="bg-f"></div>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <img src="images/timh-600x600.jpg" alt="Tim Hanewich" class="hero-avatar reveal">
+            <h1 class="hero-name reveal reveal-delay-1">
+                Hi, I'm <span class="gradient">Tim Hanewich</span>
+            </h1>
+            <p class="hero-tagline reveal reveal-delay-2">
+                Building AI agents, autonomous robots, and open-source tools.
+            </p>
+            <p class="hero-bio reveal reveal-delay-3">
+                Software engineer at Microsoft empowering State &amp; Local Government with the Power Platform. Beyond work, I'm constantly building &mdash; from quadcopter flight controllers and 3D-printed rovers to neural networks and AI agent frameworks.
+            </p>
+            <div class="social-links reveal reveal-delay-4">
+                <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+                <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
+                <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-            <!--Opening content-->
-            <div id="opening">
-
-                <!--Headshot-->
-                <img class="headshot" src="images/timh-600x600.jpg">
-
-                <h1 class="title">Hi, I'm Tim Hanewich. Thanks for visiting.</h1>
-                <p class="blurb">Welcome to my personal portfolio. I wrote this site to serve as a collection of my projects and broader work. I am passionate about AI, robotics, fintech, 3D-printing, and pushing the boundaries of citizen development with low-code technologies like Microsoft's Power Platform. Please have a look around!</p>
-
-                <!--Social-->
-                <div class="social-drawer">
-
-                    <a href="https://github.com/timhanewich" class="fab fa-github fa-2x social-icon" target="_blank"></a>
-					<a href="https://www.linkedin.com/in/timhanewich/" class="fab fa-linkedin-in fa-2x social-icon" target="_blank"></a>
-					<a href="https://twitter.com/timhanewich" class="fab fa-twitter fa-2x social-icon no-text-decor" target="_blank"></a>
-                    <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank"><img src="images/nuget.png" style="width: 2em;"></a>
-                    <a href="https://www.npmjs.com/~timhanewich" class="fab fa-npm fa-2x social-icon no-text-decor" target="_blank"></a>
-                    <a href="https://timhanewich.medium.com/" class="fab fa-medium fa-2x social-icon" target="_blank"></a>
-                    
-
-                </div>
-
-                <!--Tabs-->
-                <div class="sections-gr">
-                    <div id="tab_Expertise" class="tab" style="border-left-width: 0px;"><a class="tab-no-decor" href="#expertise">Expertise</a></div>
-                    <div id="tab_Projects" class="tab"><a class="tab-no-decor" href="#projects">Projects</a></div>
-                    <div id="tab_Writings" class="tab" style="border-right-width: 0px;"><a class="tab-no-decor" href="#writings">Writings</a></div>
-                </div>
-                <div class="sections-gr">
-                    <div id="tab_WorkAtMicrosoft" class="tab" style="grid-area: t2; border-left-width: 0px; width: 19vw;"><a class="tab-no-decor" href="#microsoft">My Work @ Microsoft</a></div>
-                    <div id="tab_Recognition" class="tab" style="grid-area: t1; border-right-width: 0px;"><a class="tab-no-decor" href="#recognition">Recognition</a></div>
-                </div>
-                
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="section-header reveal">
+            <h2 class="section-title">About</h2>
+            <div class="section-line"></div>
+        </div>
+        <p class="about-text reveal">
+            At Microsoft, I work with State &amp; Local Government agencies, empowering them with digital solutions on the Power Platform. Outside of work, I'm driven by a passion for building &mdash; whether it's AI agents that reason and act, quadcopter drones that stabilize themselves mid-air, or 3D-printed rovers that explore autonomously.
+        </p>
+        <div class="about-cards reveal">
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fab fa-microsoft"></i></div>
+                <h3 class="about-card-title">Microsoft</h3>
+                <p class="about-card-desc">Power Platform &amp; State Government Solutions</p>
             </div>
-            
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="about-card-title">UCF &mdash; 4.0 GPA</h3>
+                <p class="about-card-desc">B.S.B.A. Accounting, Summa Cum Laude</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-code-branch"></i></div>
+                <h3 class="about-card-title">Open Source</h3>
+                <p class="about-card-desc">30+ projects across AI, robotics, finance &amp; more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+        <div class="section-header reveal">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">A collection of things I've built &mdash; from AI agents and flight controllers to financial APIs and embedded systems.</p>
+            <div class="section-line"></div>
         </div>
 
-        <!--Expertise-->
-        <div class="center-div" style="width: 70%;">
-            <h2 id="expertise" class="section-title">My Expertise</h2>
-
-
-            <h4 class="skill-title">Technical</h4>
-            <p class="skill s-lvl-3">
-                C#
-                
-            </p>
-            <p class="skill s-lvl-3">VB.NET</p>
-            <p class="skill s-lvl-3">SQL</p>
-            <p class="skill s-lvl-3">
-                UWP
-                <span class="skill-tool-tip">Universal Windows Platform (Windows 10 native apps)</span>
-            </p>
-            <p class="skill s-lvl-2">
-                XAML
-                <span class="skill-tool-tip">Extensible Application Markup Language (commonly used in Win10 and mobile app development)</span>
-            </p>
-            <p class="skill s-lvl-2">WinForms</p>
-            <p class="skill s-lvl-1">
-                WPF
-                <span class="skill-tool-tip">Windows Presentation Foundation</span>
-            </p>
-            <p class="skill s-lvl-3">Console Apps</p>
-            <p class="skill s-lvl-3">Azure Functions</p>
-            <p class="skill s-lvl-3">Power Apps</p>
-            <p class="skill s-lvl-3">Power Automate</p>
-            <p class="skill s-lvl-2">Azure Logic Apps</p>
-            <p class="skill s-lvl-3">
-                Dataverse
-                <span class="skill-tool-tip">Microsoft Dataverse, the native database for the Power Platform</span>
-            </p>
-            <p class="skill s-lvl-3">
-                NuGet
-                <span class="skill-tool-tip">.NET library package manager</span>
-            </p>
-
-            <p class="skill s-lvl-3">
-                git
-                <span class="skill-tool-tip">Distributed version control system</span>
-            </p>
-            <p class="skill s-lvl-2">Github</p>
-            <p class="skill s-lvl-3">
-                Azure Storage
-                <span class="skill-tool-tip">Blob storage, table storage, queue storage, etc.</span>
-            </p>
-            <p class="skill s-lvl-2">HTML</p>   
-            <p class="skill s-lvl-2">CSS</p>
-            <p class="skill s-lvl-2">Javascript</p> 
-            <p class="skill s-lvl-2">jQuery</p>
-            
-            <p class="skill s-lvl-3">
-                HTTP
-                <span class="skill-tool-tip">Hypertext Transfer Protocol</span>
-            </p>
-            <p class="skill s-lvl-2">Unit Testing</p>
-            <p class="skill s-lvl-3">
-                REST
-                <span class="skill-tool-tip">Representational State Transfer</span>
-            </p>
-            <p class="skill s-lvl-1">node</p>
-            <p class="skill s-lvl-2">
-                npm
-                <span class="skill-tool-tip">Node Packet Manager</span>
-            </p>
-            <p class="skill s-lvl-2">TypeScript</p>
-            <p class="skill s-lvl-3">Python</p>
-            <p class="skill s-lvl-1">Raspberry Pi</p>
-            <p class="skill s-lvl-2">
-                VBA
-                <span class="skill-tool-tip">Visual Basic for Applications - where I started developing!</span>
-            </p>
-            <p class="skill s-lvl-2">Sharepoint</p>
-            <p class="skill s-lvl-2">Microsoft Graph</p>
-            <p class="skill s-lvl-1">
-                bash
-                <span class="skill-tool-tip">Unix shell</span>
-            </p>
-            <p class="skill s-lvl-1">
-                UDP/TCP
-                <span class="skill-tool-tip">User datagram protocol, transmission control protocol</span>
-            </p>
-            <p class="skill s-lvl-3">
-                XBRL
-                <span class="skill-tool-tip">Extensible Business Reporting Language</span>
-            </p>
-            <p class="skill s-lvl-2">
-                D365 Liquid Templates
-                <span class="skill-tool-tip">Advanced web development on the D365 platform</span>
-            </p>
-            <p class="skill s-lvl-2">Markdown</p>
-            <p class="skill s-lvl-2">XML</p>
-            <p class="skill s-lvl-3">JSON</p>
-            <p class="skill s-lvl-2">.NET MAUI</p>
-            <p class="skill s-lvl-2">Azure Cognitive Services</p>
-            <p class="skill s-lvl-2">Webhook Design</p>
-            <p class="skill s-lvl-2">
-                spaCy
-                <span class="skill-tool-tip">Python-based Natural Language Processing library</span>
-            </p>
-            <p class="skill s-lvl-2">
-                I2C
-                <span class="skill-tool-tip">"Inter-Integrated Circuit", a serial protocol used for communication between a maste/slave devices</span>
-            </p>
-            <p class="skill s-lvl-3">
-                PID Controllers
-                <span class="skill-tool-tip">Proportional, Integral, Derivative system used to determine application of force in robotics</span>
-            </p>
-            
-
-            <!--Subject matter-->
-            <h4 class="skill-title">Subject Matter</h4>
-            <p class="skill s-lvl-3">Flight Controllers</p>
-            <p class="skill s-lvl-2">
-                Neural Network Architecture
-                <span class="skill-tool-tip">I have developed and implemented my own neural networks</span>
-            </p>
-            <p class="skill s-lvl-3">Microsoft Power Platform</p>
-            <p class="skill s-lvl-2">Aviation</p>
-            <p class="skill s-lvl-1">Space Flight</p>
-            <p class="skill s-lvl-3">
-                Motorsport Timing Analysis
-                <span class="skill-tool-tip">I have designed and developed performance analysis tools for live timings</span>
-            </p>
-            <p class="skill s-lvl-1">Electrical Engineering</p>
-            <p class="skill s-lvl-2">Search Engine Optimization</p>
-            <p class="skill s-lvl-3">Financial Statement Analysis</p>
-            <p class="skill s-lvl-1">Chess</p>
-            <p class="skill s-lvl-3">CRM Platform</p>
-            <p class="skill s-lvl-2">Equity Valuation</p>
-            <p class="skill s-lvl-2">REST API Versioning Strategy</p>
-            <p class="skill s-lvl-2">Natural Language Processing</p>
-            <p class="skill s-lvl-1">Named Entity Recognition</p>
-            <p class="skill s-lvl-3">
-                Equity Investing
-                <span class="skill-tool-tip">I've been an investing since 2010</span>
-            </p>
-            <p class="skill s-lvl-1">Dependency Parsing</p>
-            <p class="skill s-lvl-2">
-                OData Standard
-                <span class="skill-tool-tip">Open Data Protocol - standard for formatting API's</span>
-            </p>
-            <p class="skill s-lvl-2">Avionics</p>
-            <p class="skill s-lvl-2">Quadcopters</p>
-            
-
-            <!--KEY-->
-            <h4 class="skill-title" style="font-size: 18px;">key</h4>
-            <div class="skill-key">
-                <p class="skill-key-desc s-lvl-3">strong competency</p>
-                <p class="skill-key-desc s-lvl-2">moderately proficient</p>
-                <p class="skill-key-desc s-lvl-1">familiar</p>
-            </div>
-
-
-            <!--Certifications-->
-            <h4 class="skill-title" style="margin-top: 40px;">Technical Certifications</h4>
-            
-            <!--PL-100-->
-            <div class="cert-grid">
-                <img class="cert-badge" style="grid-area: left;" src="https://images.credly.com/images/60030167-ab95-46aa-8391-c069102e5602/power-platform-app-maker-600x600.png">
-                <div class="cert-content-cont">
-                    <div class="cert-content">
-                        <h3 class="cert-title"><a href="https://docs.microsoft.com/en-us/learn/certifications/power-platform-app-maker/" target="_blank">Power Platform App Maker Associate</a></h3>
-                        <p class="cert-desc"></p>
-                    </div>
-                </div>
-            </div>
-
-            <!--MB-200-->
-            <!--MB-200 is now the PL-200, so changed to that-->
-            <div class="cert-grid">
-                <img class="cert-badge" style="grid-area: left;" src="https://images.youracclaim.com/size/340x340/images/243ab956-2af5-4abd-8b91-27bc580f17ae/power-platform-functional-consultant-600x600__1_.png">
-                <div class="cert-content-cont">
-                    <div class="cert-content">
-                        <h3 class="cert-title"><a href="https://docs.microsoft.com/en-us/learn/certifications/power-platform-functional-consultant-associate/" target="_blank">Power Platform Functional Consultant</a></h3>
-                        <p class="cert-desc"></p>
-                    </div>
-                </div>
-            </div>
-
-            <!--MB-900-->
-            <div class="cert-grid">
-                <img class="cert-badge" style="grid-area: left;" src="https://images.credly.com/images/ff67d2c3-ad8f-4766-b795-fc34a8461c94/dynamics365-fundamentals-600x600.png">
-                <div class="cert-content-cont">
-                    <div class="cert-content">
-                        <h3 class="cert-title"><a href="https://docs.microsoft.com/en-us/learn/certifications/d365-fundamentals/" target="_blank">Dynamics 365 Fundamentals</a></h3>
-                        <p class="cert-desc"></p>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-            
+        <!-- Filter Bar -->
+        <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" data-filter="ai" onclick="filterProjects('ai')">AI &amp; ML</button>
+            <button class="filter-btn" data-filter="robotics" onclick="filterProjects('robotics')">Robotics</button>
+            <button class="filter-btn" data-filter="finance" onclick="filterProjects('finance')">Finance</button>
+            <button class="filter-btn" data-filter="iot" onclick="filterProjects('iot')">IoT</button>
+            <button class="filter-btn" data-filter="microsoft" onclick="filterProjects('microsoft')">Microsoft</button>
+            <button class="filter-btn" data-filter="software" onclick="filterProjects('software')">Software</button>
+            <button class="filter-btn" data-filter="gaming" onclick="filterProjects('gaming')">Gaming</button>
         </div>
 
-        <!--Projects title (i chose to not put the projects in here so they are not confined to the width)-->
-        <div class="center-div" style="width: 70%;">
-            <h2 id="projects" class="section-title">My Projects</h2>
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+            <!-- ===== 2025 ===== -->
+
+            <a href="https://github.com/TimHanewich/TimHanewich.Foundry" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">TimHanewich.Foundry</h3>
+                <p class="project-card-desc">.NET library for interfacing with LLM deployments in Microsoft Foundry.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/TimHanewich.AgentFramework" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">TimHanewich.AgentFramework</h3>
+                <p class="project-card-desc">Lightweight .NET library for building AI agents with LLMs, offering modular tools for message handling, token management, and automation.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/AIDA" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">AIDA</h3>
+                <p class="project-card-desc">Lightweight AI desktop assistant that connects generative AI to your console, enabling interaction with LLMs and desktop resources.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/LLM-TAG" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">LLM-TAG</h3>
+                <p class="project-card-desc">An LLM-driven text adventure game engine, inspired by the 1977 classic Zork.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">Centauri Flight Controller</h3>
+                <p class="project-card-desc">Quadcopter flight controller, 3D-printed drone frame, PC-based controller code, and more.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/eBike/" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">eBike Conversion</h3>
+                <p class="project-card-desc">Strapped a 5,000-watt brushless motor onto an old Schwinn bicycle and designed the full electronics package.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/motorcycle-data-display" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">Motorcycle Data Dashboard</h3>
+                <p class="project-card-desc">Dashboard for a motorcycle, displaying sensor telemetry like battery voltage, temperature, and humidity.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/PACHI" target="_blank" rel="noopener" class="project-card reveal" data-category="microsoft">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="microsoft">Microsoft</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-card-title">PACHI</h3>
+                <p class="project-card-desc">Experimental framework enabling an LLM to autonomously interact with a Power App.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2024 ===== -->
+
+            <a href="https://github.com/TimHanewich/tetris-ai-mini" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">Tetris AI</h3>
+                <p class="project-card-desc">Use of Q-Learning, a reinforcement learning technique, to train an AI agent to play a simplified version of Tetris.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/PYPER2" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">PYPER 2</h3>
+                <p class="project-card-desc">Evolved iteration of the PYPER rover platform featuring LoRa-based communication and an improved mechanical design.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/ranger" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">Ranger</h3>
+                <p class="project-card-desc">Long-range endurance rover designed for global remote control via the web, using Azure Queue Storage for bidirectional communication.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/LoRaLink" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">LoRa Link</h3>
+                <p class="project-card-desc">Fully 3D-printed Long Range (LoRa) radio controller using a custom communication protocol.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/cam-monitor" target="_blank" rel="noopener" class="project-card reveal" data-category="iot">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="iot">IoT</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">Security Webcam</h3>
+                <p class="project-card-desc">Webcam-based image capture system for SBCs, uploading to Azure Blob Storage with remote timelapse generation via FFMPEG.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/MicroPython-Collection/tree/master/REYAX-RYLR998" target="_blank" rel="noopener" class="project-card reveal" data-category="software">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="software">Software</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">RYLR998 LoRa Driver</h3>
+                <p class="project-card-desc">MicroPython driver for the REYAX RYLR998 LoRa module, enabling easy UART-based wireless communication for IoT projects.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/MicroPython-Collection/tree/master/ENS160" target="_blank" rel="noopener" class="project-card reveal" data-category="software">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="software">Software</span>
+                    <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-card-title">ENS160 Driver</h3>
+                <p class="project-card-desc">Lightweight MicroPython driver for the ENS160 multi-gas sensor, enabling air quality readings via I2C in embedded applications.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2023 ===== -->
+
+            <a href="https://github.com/TimHanewich/Baseball-Betting-NN" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">MLB Betting Line Predictor</h3>
+                <p class="project-card-desc">A TensorFlow neural network that analyzes baseball game data to predict betting lines and win probabilities in real time.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://timhanewich.medium.com/taking-flight-with-the-raspberry-pi-pico-micropython-diy-quadcopter-drone-61ed4f7ee746" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">Scout Flight Controller</h3>
+                <p class="project-card-desc">Custom-developed quadcopter drone flight controller firmware running on a $4 Raspberry Pi Pico microcontroller.</p>
+                <div class="project-card-footer"><i class="fab fa-medium"></i> Read on Medium</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/PYPER" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="robotics">Robotics</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">PYPER</h3>
+                <p class="project-card-desc">Python-powered, 3D-printed electric rover designed from scratch with custom chassis, steering, and drivetrain.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=AxWjqtQHraE" target="_blank" rel="noopener" class="project-card reveal" data-category="iot">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="iot">IoT</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">Motorcycle Smart Jacket</h3>
+                <p class="project-card-desc">GPS-enabled jacket for motorcyclists that improves visibility by illuminating at specific high-risk moments.</p>
+                <div class="project-card-footer"><i class="fab fa-youtube"></i> Watch Video</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/air-quality-box" target="_blank" rel="noopener" class="project-card reveal" data-category="iot">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="iot">IoT</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">Home Air Quality Sensor</h3>
+                <p class="project-card-desc">IoT system that monitors indoor air quality in real-time, capturing CO&#8322;, VOCs, and environmental data.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/bed-light-server" target="_blank" rel="noopener" class="project-card reveal" data-category="iot">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="iot">IoT</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">Mood Lighting Server</h3>
+                <p class="project-card-desc">IoT web server that controls WS2812B LED lights via HTTP requests, allowing for dynamic mood lighting.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/MicroPython-Collection/tree/master/MPU6050" target="_blank" rel="noopener" class="project-card reveal" data-category="software">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="software">Software</span>
+                    <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-card-title">MPU6050 Driver</h3>
+                <p class="project-card-desc">Lightweight MicroPython driver for the MPU-6050 accelerometer and gyroscope, enabling motion sensing via I2C.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2022 ===== -->
+
+            <a href="https://github.com/TimHanewich/TimHanewich.Dataverse" target="_blank" rel="noopener" class="project-card reveal" data-category="microsoft">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="microsoft">Microsoft</span>
+                    <span class="project-year">2022</span>
+                </div>
+                <h3 class="project-card-title">TimHanewich.Dataverse</h3>
+                <p class="project-card-desc">Lightweight .NET library for simplified authentication and interaction with Microsoft Dataverse.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/TimHanewich.OData" target="_blank" rel="noopener" class="project-card reveal" data-category="software">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="software">Software</span>
+                    <span class="project-year">2022</span>
+                </div>
+                <h3 class="project-card-title">TimHanewich.OData</h3>
+                <p class="project-card-desc">A lightweight .NET library for building, parsing, and translating OData queries.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/TimHanewich.Chess" target="_blank" rel="noopener" class="project-card reveal" data-category="gaming">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="gaming">Gaming</span>
+                    <span class="project-year">2022</span>
+                </div>
+                <h3 class="project-card-title">TimHanewich.Chess</h3>
+                <p class="project-card-desc">Chess positional evaluation engine written in .NET (C#), implementing Mini-Max with Alpha-Beta pruning.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2021 ===== -->
+
+            <a href="https://aletheiaapi.com/" target="_blank" rel="noopener" class="project-card reveal" data-category="finance">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="finance">Finance</span>
+                    <span class="project-year">2021</span>
+                </div>
+                <h3 class="project-card-title">Aletheia</h3>
+                <p class="project-card-desc">Financial data API with a Microsoft-certified Power Platform Connector. Processed 1.2M SEC filings and 3.3M insider trades.</p>
+                <div class="project-card-footer"><i class="fas fa-external-link-alt"></i> Visit Site</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/TimHanewich.MicrosoftGraphHelper" target="_blank" rel="noopener" class="project-card reveal" data-category="microsoft">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="microsoft">Microsoft</span>
+                    <span class="project-year">2021</span>
+                </div>
+                <h3 class="project-card-title">Microsoft Graph Helper</h3>
+                <p class="project-card-desc">.NET package simplifying authentication and interaction with Microsoft Graph.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2020 ===== -->
+
+            <a href="https://github.com/TimHanewich/SecuritiesExchangeCommission.Edgar" target="_blank" rel="noopener" class="project-card reveal" data-category="finance">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="finance">Finance</span>
+                    <span class="project-year">2020</span>
+                </div>
+                <h3 class="project-card-title">SEC EDGAR Library</h3>
+                <p class="project-card-desc">.NET package for accessing SEC EDGAR filings &mdash; 20+ years of financial data on any publicly traded company.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <a href="https://github.com/TimHanewich/Xbrl" target="_blank" rel="noopener" class="project-card reveal" data-category="finance">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="finance">Finance</span>
+                    <span class="project-year">2020</span>
+                </div>
+                <h3 class="project-card-title">XBRL Library</h3>
+                <p class="project-card-desc">.NET package for parsing and extracting financial data from XBRL documents.</p>
+                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
+            </a>
+
+            <!-- ===== 2019 ===== -->
+
+            <a href="https://twitter.com/EarningsAlley" target="_blank" rel="noopener" class="project-card reveal" data-category="finance">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="finance">Finance</span>
+                    <span class="project-year">2019</span>
+                </div>
+                <h3 class="project-card-title">Earnings Alley</h3>
+                <p class="project-card-desc">Twitter bot that tweets highlights from Wall Street's latest earnings releases and financial events.</p>
+                <div class="project-card-footer"><i class="fab fa-twitter"></i> View on Twitter</div>
+            </a>
+
+            <a href="https://apps.microsoft.com/store/detail/apex-visual/9P5BLJV6W9B5" target="_blank" rel="noopener" class="project-card reveal" data-category="gaming">
+                <div class="project-card-header">
+                    <span class="project-tag" data-cat="gaming">Gaming</span>
+                    <span class="project-year">2019</span>
+                </div>
+                <h3 class="project-card-title">Apex Visual</h3>
+                <p class="project-card-desc">Windows app for live telemetry display, coaching, and driving analysis for the official F1 video game. 20,000+ downloads.</p>
+                <div class="project-card-footer"><i class="fab fa-microsoft"></i> View in Store</div>
+            </a>
+
         </div>
+    </section>
 
-        <!--Scout-->
-        <div id="project-scout" style="margin-top: 50px;">
-            <div class="project-grid" style="width: 70%;">
-
-                <div class="grid-part" style="grid-area: left;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mbrcnaByMyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-
-                <div class="grid-part" style="grid-area: right; margin-left: 18px;">
-                    <h2 class="dataverse-project-title" style="color: darkblue;">The Scout Flight Controller</h2>
-                    <p class="project-desc">Bringing my software, mechanical, and electrical engineering skills together, I developed, from scratch, <b>Scout</b>: a quadcopter flight controller that runs on nothing more than a $4 Raspberry Pi Pico microcontroller. The <b>Scout Flight Controller</b> observes a quadcopter aircraft's rate of attitude change, compares this to the pilot's desired attitude, and rapidly adjusts the thrust of each of the four motors <i>250 times per second</i> to achieve the pilot's intended maneuvers.</p>
-                    <p class="project-desc">I released a 12-part series on Medium that describes how I developed the <b>Scout Flight Controller</b> (click button below).</p>
-                </div>
-
-            </div>
-
-            <a href="https://github.com/TimHanewich/scout" target="_blank">
-                <div class="visit-btn" style="margin-top: 15px;">Read more on Scout</div>
+    <!-- Writings -->
+    <section class="writings-section" id="writings">
+        <div class="writings-inner reveal">
+            <h2 class="section-title">Writings</h2>
+            <div class="section-line" style="margin-bottom: 1.5rem;"></div>
+            <p>I write about machine learning, robotics, coding projects, and the things I learn along the way on Medium.</p>
+            <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" class="btn-primary">
+                <i class="fab fa-medium"></i> Read on Medium
             </a>
         </div>
+    </section>
 
-        <!--Aletheia-->
-        <div id="project-aletheia" class="hr-proj" style="margin-top: 50px;">
-
-            <div class="project-grid" style="width: 70%;">
-                
-                <!--Intro-->
-                <div class="grid-part" style="grid-area: left;">       
-                    <img class="aletheia-wm" src="images/aletheia-wm-small.png">
-                    <p class="project-desc">Every year the Securities Exchange Commission receives and releases more than 3.4 billion data points from publicly and privately traded companies. This data spans many categories from insider trading to financial health. These data points are largely meaningless in their unstructured and unrelated form.</p>
-                    <p class="project-desc">I created Aletheia to ingest this data, categorize and structure it into meaningful data with a common schema, and provide access through an easily accessible REST API. Aletheia has processed 1.2M SEC filings, 3.3M insider trading transactions, 30,000 financial statements, and nearly 400,000 financial facts</p>
-                </div>
-
-                <!--Image-->
-                <div class="grid-part" style="grid-area: right;">
-                    <img src="images/aletheia-on-desktop-small.png" class="proj-img">
-                </div>
-
-            </div>
-
-            <a href="https://aletheiaapi.com" target="_blank">
-                <div class="visit-btn">Visit Aletheia</div>
-            </a>
-            
-
+    <!-- Footer -->
+    <footer class="footer" id="connect">
+        <div class="footer-links">
+            <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+            <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
+            <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
         </div>
+        <p>&copy; <span id="year"></span> Tim Hanewich</p>
+    </footer>
 
-        <!--Apex visual-->
-        <div id="project-apex-visual" style="margin-top: 50px;">
-            <div class="project-grid" style="width: 70%;">
+    <script>
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-                <div class="grid-part" style="grid-area: left;">
-                    <img src="images/av-live-small.png" class="proj-img" style="width: 90%;">
-                </div>
-                
+        // Nav: frosted glass on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
 
-                <div class="grid-part" style="grid-area: right;">
-                    <img src="images/apex-visual-wm.png" style="width: 55%;">
-                    <p class="project-desc">Apex Visual is a companion app for the <a href=https://www.formula1game.com>official Formula 1 video game</a> by Codemasters. Apex Visual provides live telemetry display modes, performance coaching, driving analysis, and more. The app is built on the Universal Windows Platform (UWP) so is available on Windows 10, Xbox, Hololens, and any other Windows-related product.</p>
-                    <p class="project-desc">Apex Visual has been a success since launching in mid-2019. To date, the app has received over 20,000 downloads and has several thousand active users.</p>
-                </div>
+        // Nav: scroll spy
+        const sections = document.querySelectorAll('section[id], footer[id]');
+        const navAnchors = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navAnchors.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+            });
+        });
 
-            </div>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navIcon = document.getElementById('navIcon');
+        navToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            navIcon.className = open ? 'fas fa-times' : 'fas fa-bars';
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navIcon.className = 'fas fa-bars';
+            });
+        });
 
-            <a href="https://www.microsoft.com/en-us/p/apex-visual-2020/9p5bljv6w9b5?activetab=pivot:overviewtab" target="_blank">
-                <div class="visit-btn">Visit Apex Visual</div>
-            </a>
-        </div>
+        // Scroll reveal with IntersectionObserver
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        <!--Temperature & Humidity Sensor-->
-        <div id="project-iot-powerapp" style="margin-top: 50px;" class="hr-proj">
-            <div class="project-grid" style="width: 70%;">
-                <div class="grid-part" style="grid-area: left;">
-                    <h2 class="dataverse-project-title">IoT Temperature Readings in Power Apps</h2>
-                    <p class="project-desc">I develoepd an end-to-end solution that continuously collects temperature & humidity data from various rooms in a household using an IoT device and displays it in a Power Apps for monitoring purposes.</p>
-                    <p class="project-desc">The backend is written in C# (.NET) while the code that runs on the IoT device is written in Python (MicroPython).</p>
-                </div>
-                <div class="grid-part" style="grid-area: right;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v0mPmCw5yl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            <a href="https://github.com/TimHanewich/smart-home-demo" target="_blank">
-                <div class="visit-btn">Code Repo</div>
-            </a>
-        </div>
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        <!--Dataverse nuget package-->
-        <div id="project-cds-lib" style="margin-top: 50px;">
-            <div class="project-grid" style="width: 70%;">
-                <div class="grid-part" style="grid-area: right;">
-                    <h2 class="dataverse-project-title">.NET Dataverse Library</h2>
-                    <p class="project-desc"><b>TimHanewich.Dataverse</b> is a C# (.NET) class library for transacting with the Microsoft Dataverse (formerly "Common Data Service" or "CDS") web API.</p>
-                    <p class="project-desc">This library supports</p>
-                    <ul class="project-desc">
-                        <li>Easy-to-use service authentication</li>
-                        <li>CRUD operations on Dataverse tables</li>
-                        <li>XRM resource metadata</li>
-                    </ul>
-                </div>
-                <div class="grid-part" style="grid-area: left;">
-                    <img src="images/dataverse.png" class="proj-img" style="width: 60%;">
-                </div>
-            </div>
-            <a href="https://github.com/TimHanewich/TimHanewich.Dataverse" target="_blank">
-                <div class="visit-btn" style="width: 350px;">Visit <b>TimHanewich.Dataverse</b></div>
-            </a>
-        </div>
+        // Project filtering
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const match = category === 'all' || card.dataset.category === category;
+                card.style.display = match ? '' : 'none';
+                if (match) {
+                    card.style.opacity = '0';
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            card.style.opacity = '1';
+                        });
+                    });
+                }
+            });
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === category);
+            });
+        }
+    </script>
 
-        <!--Ride Along-->
-        <div id="project-ridealong" style="margin-top: 50px;" class="hr-proj">
-            <div class="project-grid" style="width: 70%;">
-                <div class="grid-part" style="grid-area: right;">
-                    <h2 class="dataverse-project-title">Ride Along</h2>
-                    <p class="project-desc"><i>Ride Along</i> is an Android app for capturing and analyzing telemetry data while riding a motorcycle. Developed on Microsoft's Xamarin platform, this application turns raw telemetry data into measured insights - acceleration/deceleration force, lean angle, top speed detection, duration of time spent stationary at stop lights, and more.</p>
-                    <p class="project-desc">For experimental purposes only. You can view a demonstration of the app on the left.</p>
-                </div>
-                <div class="grid-part" style="grid-area: left;">
-                    <iframe width="500" height="315" src="https://www.youtube.com/embed/Shsdiz90Qb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
-        
-        <!--Chess AI-->
-        <div id="project-chessbot" style="margin-top: 50px;">
-            <div class="project-grid" style="width: 70%;">
-
-                <div class="grid-part" style="grid-area: right;">
-                    <iframe src="https://lichess.org/embed/game/NY1I6Dwm?theme=auto" width=600 height=397 frameborder=0></iframe>
-                </div>
-
-                <div class="grid-part" style="grid-area: left;">
-                    <h2 class="earnings-alley-project-title">Chess AI</h2>
-                    <p class="project-desc">I developed a Chess positional evaluation engine that is capable of playing a game of Chess. The engine implements the Mini-Max Algorithm and uses Alpha-Beta pruning to minimize the girth of the move tree to evaluate while determining optimal next moves.</p>
-                    <p class="project-desc">You can view an example of a full game played by my engine with the white pieces to the left. The engine successfully follows a sound opening, plays aggressively through the mid-game, discovers the winning move sequence in the endgame, and executes the checkmate.</p>
-                </div>
-            </div>
-
-            
-
-            <a href="https://github.com/TimHanewich/TimHanewich.Chess" target="_blank">
-                <div class="visit-btn" style="width: 250px;">Visit <b>TimHanewich.Chess</b></div>
-            </a>
-        </div>
-
-        <!--Environmental Air Quality-->
-        <div id="project-ridealong" style="margin-top: 50px;" class="hr-proj">
-            <div class="project-grid" style="width: 70%;">
-                <div class="grid-part" style="grid-area: right;">
-                    <h2 class="dataverse-project-title">Environmental Air Quality Monitoring</h2>
-                    <p class="project-desc">I developed an Environmental Air Quality Monitoring solution using IoT devices, Power Automate, Dataverse, Power Apps, and Power BI. The solution collects air quality data from sensors, stores it in Dataverse, and displays it in a Power App and Power BI dashboard. This project showcases how state and local governments can track and improve air quality, protecting public health and supporting sustainability. The open-source solution is available on GitHub, with assets and instructions for replication.</p>
-                </div>
-                <div class="grid-part" style="grid-area: left;">
-                    <img src="https://i.imgur.com/hCSq3Nr.png" class="proj-img" style="width: 90%;">
-                </div>
-            </div>
-
-            <!--Latest telemetry-->
-            <div id="eaq-telemetry" style="display: none;">
-                <p style="text-align: center; font-size: 22px; margin-bottom: 0px; margin-top: 0px; font-weight: bold;">Live Air Quality Data Outside My Home in Sarasota, Florida</p>
-                <p id="aqs-sampled">Data sampled at </p>
-                <p id="aqs-temp" class="aq-stat">Temperature: ?°F</p>
-                <p id="aqs-humidity" class="aq-stat">Humidity: ?%, ? grams/m3</p>
-                <p id="aqs-aqi" class="aq-stat">Air Quality Index: ?</p>
-                <p id="aqs-tvoc" class="aq-stat">Total Volatile Organic Compounds: ? ppb</p>
-                <p id="aqs-eco2" class="aq-stat">Equivalent Carbon Dioxide: ? ppm</p>
-            </div>
-
-
-            <a href="https://github.com/microsoft/SLG-Business-Applications/tree/main/demos/Environmental-Air-Quality-Monitoring" target="_blank">
-                <div class="visit-btn" style="width: 250px;">Check it out on GitHub</b></div>
-            </a>
-        </div>
-
-
-
-        <!--Other projects title-->
-        <div class="center-div" style="width: 70%;">
-            <h2 id="projects" class="section-title" style="margin-bottom: 15px;">Other Projects</h2>
- 
-            <div class="opc">
-
-                <!--Neural Network-->
-                <a class="op-link" href="https://github.com/TimHanewich/TimHanewich.NeuralNetwork">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://api.nuget.org/v3-flatcontainer/timhanewich.neuralnetwork/0.1.0/icon">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">TimHanewich.NeuralNetwork</p>
-                            <p class="op-desc">I designed, developed, and implemented my own neural network engine in C# (like Keras, TensorFlow, PyTorch, etc.) and later used this to predict frisks and arrests by the Seattle Police Department.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--Baseball Betting Neural Net-->
-                <a class="op-link" href="https://github.com/TimHanewich/Baseball-Betting-NN">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/ScOOOaF.png">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">Baseball Betting Neural Net</p>
-                            <p class="op-desc">Trained a TensorFlow-based neural network to predict appropriate run under/over line, total run line, and money line for MLB baseball games given any game scenarios using data I collected from ESPN and DraftKings.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--Motorcycle LED Jacket-->
-                <a class="op-link" href="https://youtu.be/AxWjqtQHraE">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/MZXT35L.png" style="object-fit: cover;">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">GPS-Driven Motorcycle LED Jacket</p>
-                            <p class="op-desc">Designed a motorcycle jacket LED system equipped with a GPS. The LED lights pulsate at specific high-safety-risk moments based upon your speed, acceleration, lane changing, and more.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--PYPER-->
-                <a class="op-link" href="https://github.com/TimHanewich/PYPER">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://camo.githubusercontent.com/bbb3e05eca79e527fb9316e5f129b754a5b5e0ac030bce211d8559dff8a714f4/68747470733a2f2f692e696d6775722e636f6d2f7778355451376f2e6a7067" style="object-fit: cover;">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">PYPER</p>
-                            <p class="op-desc">Designed and developed a 3D-printed car, creating the chassis, steering, and drivetrain mechanisms, as well as the electrical circuits and Raspberry Pi-based control system, which I programmed to drive the vehicle.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--OData Parser-->
-                <a class="op-link" href="https://github.com/TimHanewich/TimHanewich.OData">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://api.nuget.org/v3-flatcontainer/timhanewich.odata/0.1.1/icon">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">TimHanewich.OData</p>
-                            <p class="op-desc">Lightweight .NET library for parsing, composing, and translating OData operations to their SQL equivalent.</p>
-                        </div>
-                    </div>
-                </a>
-
-                
-
-                <!--File to image encoder-->
-                <a class="op-link" href="https://github.com/TimHanewich/PhotoEncoding">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://camo.githubusercontent.com/c62acb6c365918602e93e81038eaa5ad1872fbad7775d9dbd3285f93d4c48336/68747470733a2f2f692e696d6775722e636f6d2f4745654d3054752e706e67">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">File to Image Encoder</p>
-                            <p class="op-desc">Converts any file to a bitmap image represenation, allowing you to "store" any file on free image hosting services like Imgur for totally free! Experimental, but fully functional.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--Air Quality IoT-->
-                <a class="op-link" href="https://github.com/TimHanewich/Air-Quality-IoT">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/BFwjKow.jpeg">
-                            <!--<img class="op-img" src="https://i.imgur.com/PLPQ6d1.jpeg">-->
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">IoT Air Quality Monitor</p>
-                            <p class="op-desc">IoT project that collects and reports interior air quality via ENS160 Multi-Gas sensor. Comes with housing design that can be 3D-printed.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--Neospace-->
-                <a class="op-link" href="https://github.com/TimHanewich/neospace">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/lYFAX0B.png">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">Neospace</p>
-                            <p class="op-desc">MicroPython library for spatially controlling a series of WS2812B LED pixels via IoT microcontroller.</p>
-                        </div>
-                    </div>
-                </a>
-                
-                <!--Bed mood lighting-->
-                <a class="op-link" href="https://github.com/TimHanewich/bed-light-server">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://raw.githubusercontent.com/TimHanewich/bed-light-server/master/image.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">Bed Mood Lighting Server</p>
-                            <p class="op-desc">Raspberry Pi running a web server that can be navigated to on home network to control series of WS2812B LED pixel strips beneath my bed.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--SEC Edgar-->
-                <a class="op-link" href="https://github.com/TimHanewich/SecuritiesExchangeCommission.Edgar">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/aO2k0rW.png">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">SEC Edgar</p>
-                            <p class="op-desc">.NET library for accessing the Security Exchange Commission's EDGAR database, allowing access to 20+ years of financial data on any publicly traded company.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--xbrl-->
-                <a class="op-link" href="https://github.com/TimHanewich/Xbrl">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://api.nuget.org/v3-flatcontainer/xbrl/5.2.0/icon">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">XBRL Parsing Library</p>
-                            <p class="op-desc">.NET library for parsing Extensible Business Reporting Language (XBRL) documents, the global language for exchanging business information, commonly used by the Securities Exchange Commision.</p>
-                        </div>
-                    </div>
-                </a>
-
-                <!--Earnings Alley-->
-                <a class="op-link" href="https://twitter.com/EarningsAlley">
-                    <div class="other-project">
-                        <div class="op-img-cont">
-                            <img class="op-img" src="https://i.imgur.com/4zPOt2Q.png">
-                        </div>
-                        <div class="op-desc-cont">
-                            <p class="op-title">Earnings Alley</p>
-                            <p class="op-desc">Twitter bot, posting analyses publicly traded companies' earnings reports, earnings calls, and more. Now retired.</p>
-                        </div>
-                    </div>
-                </a>
-
-
-            </div>
-
-        </div>
-
-
-        <!--Writings-->
-        <div id="writings" class="center-div" style="width: 70%;">
-            <h2 class="section-title" style="margin-bottom: 15px">My Writings</h2>
-            <p class="body-txt" style="margin-top: 0px;">Follow me <a target="_blank" href="https://timhanewich.medium.com/">on Medium</a> for my literary work!</p>
-        </div>
-
-
-        <!--My work @ Microsoft-->
-        <div id="microsoft" class="center-div" style="width: 70%; margin-top: 50px;">
-            
-            <!--Title-->
-            <div class="msft-section-title-box">
-                <h2 class="msft-section-title">My Work @ </h2>
-                <img class="msft-img-title" src="images/msft.png">
-            </div>
-
-            <p class="body-txt">In my role at Microsoft, I work closely with enterprise State & Local Government agencies on identifying, designing, and proving digital solutions that deliver key business impact. I serve as an evangelist of Microsoft's Power Platform. I collaborate with customers to gain an understanding of their circumstances and needs and architect and prototype platform-based solutions to address these needs.</p>
-            <p style="text-align: center; font-size: 23px;"><a href="https://github.com/microsoft/SLG-Business-Applications">See what I'm up to at Microsoft</a></p>
-
-        </div>
-
-        <!--Recognition-->
-        <div class="center-div" style="width: 70%;">
-            <h2 id="recognition" class="section-title">Recognition</h2>
-
-            <!--Low-code revolution show-->
-            <h3 class="badges-title">Featured on the <i>Low Code Revolution Show</i></h3>
-            <p class="badges-desc">I was featured on Microsoft's <i>Low Code Revolution Show</i> with <a href="https://www.youtube.com/channel/UCz_x76EBX5UXsV27drGNh6w" target="_blank">April Dunnam</a> to showcase an IoT home-automation solution I developed that leverages Raspberry Pi's, Azure Functions, and Power Apps to record and display temperature and humidity data in my home.</p>
-            <p class="badges-desc">Check it out below!</p>
-            <iframe width="70%" height="440px" src="https://www.youtube.com/embed/v0mPmCw5yl0"></iframe>
-
-
-            <!--Badges received at Microsoft-->
-            <h3 class="badges-title">Peer-Recognition Badges at Microsoft</h3>
-            <p class="badges-desc">At Microsoft, we are given the opportunity to recognize the contributions of our peers with nomination of <b>badges</b> each fiscal year. The list below showcases the areas I have received recognition for by my peers at Microsoft.</p>
-            <div id="badges">
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="08981527-5ea5-47e4-9dff-8c6bb6a5db8c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f73b1893-d30e-46e7-ae63-23d5a9d044db" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b5e28de3-8c74-412e-80dd-3c8c874da647" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="56708218-9503-4e64-bdb8-d3216f3fe588" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="87fc1081-d0fe-4825-814f-840168b705f2" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-            </div>
-
-            <!--UCF Accounting Degree-->
-            <h3 class="school-title"><a href="https://business.ucf.edu/" target="_blank" style="color: rgb(181, 152, 90); border: none;">The University of Central Florida</a></h3>
-            <p class="school-degree">Accounting B.S.B.A</p>
-            <p class="school-distinction"><b>Summa Cum Laude</b> ("with highest honor") distinction</p>
-            <p class="school-distinction">4.0 / 4.0 GPA</p>
-
-            <!--Founders day award video-->
-			<h2 id="founders-day-title"  style="margin-top: 30px; margin-bottom: 0px;">UCF College of Business Founders Day Award 2019</h2>
-            <p style="font-size: 16px; text-align: center; margin-top: 5px;">UCF's prestigious Founders' Day Award honors the outstanding achievement of select high-impact students and faculty. Each college selects one student to receive this honor each year. I was nominated and selected for the award in 2019, my senior year at UCF, out of the College of Business' approximately 8,500 students.</p>
-			<iframe id="founders-day" width="70%" height="440px" src="https://www.youtube.com/embed/YGYnTlU1pTA"></iframe>
-
-        </div>
-        
-        <!--DEAD AREA-->
-        <div style="width: 100%; height: 100px;"></div>
-
-        <!--Sections to include:-->
-        <!--Projects-->
-        <!--Expertise (areas of expertise)-->
-        <!--Recognition-->
-        <!--Writings (blogs? The AI article i did on medium?) Maybe call this research?-->
-        <!--Intellectual Property (IP)-->
-        
-        <script src="home/resize.js"></script>
-        <script src="home/skill-tt.js"></script>
-        <script src="home/tab-mouse-reactions.js"></script>
-        <script src="home/air-quality-stats.js"></script>
-    </body>
+</body>
 </html>
