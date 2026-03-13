@@ -541,11 +541,18 @@
                     const tags = (item.categories || []).slice(0, 3)
                         .map(t => '<span class="article-tag">' + t + '</span>').join('');
 
+                    // Extract first image from description HTML
+                    const imgMatch = (item.description || '').match(/src=["']([^"']+)/);
+                    const thumb = imgMatch ? imgMatch[1] : '';
+
                     const a = document.createElement('a');
                     a.href = item.link;
                     a.target = '_blank';
                     a.rel = 'noopener';
                     a.className = 'article-item reveal';
+                    if (thumb) {
+                        a.style.backgroundImage = 'url(' + thumb + ')';
+                    }
                     a.innerHTML =
                         '<span class="article-date">' + date + '</span>' +
                         '<div class="article-body">' +

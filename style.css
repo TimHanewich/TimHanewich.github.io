@@ -551,13 +551,36 @@ a:hover {
 
 .article-item {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 1.25rem;
-    padding: 1.15rem 0;
+    padding: 1.15rem 1rem;
     border-bottom: 1px solid var(--border-color);
     text-decoration: none;
     color: inherit;
     transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.article-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--bg-secondary) 35%, rgba(17, 17, 24, 0.75) 70%, rgba(17, 17, 24, 0.55) 100%);
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.article-item:hover::before {
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, rgba(17, 17, 24, 0.65) 60%, rgba(17, 17, 24, 0.4) 100%);
+}
+
+.article-item > * {
+    position: relative;
+    z-index: 1;
 }
 
 .article-item:first-child {
@@ -565,7 +588,7 @@ a:hover {
 }
 
 .article-item:hover {
-    padding-left: 0.75rem;
+    padding-left: 1.25rem;
 }
 
 .article-item:hover .article-title {
