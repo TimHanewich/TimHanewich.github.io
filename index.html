@@ -452,7 +452,7 @@
             <p class="section-subtitle">I write about machine learning, robotics, coding projects, and the things I learn along the way.</p>
             <div class="section-line"></div>
         </div>
-        <div class="articles-grid" id="articlesGrid">
+        <div class="articles-list" id="articlesList">
             <div class="articles-loading"><i class="fas fa-spinner fa-spin"></i>&ensp;Loading articles from Medium&hellip;</div>
         </div>
         <div class="writings-cta">
@@ -532,37 +532,34 @@
             .then(res => res.json())
             .then(data => {
                 if (data.status !== 'ok') throw new Error('RSS fetch failed');
-                const grid = document.getElementById('articlesGrid');
-                grid.innerHTML = '';
+                const list = document.getElementById('articlesList');
+                list.innerHTML = '';
                 data.items.slice(0, 10).forEach(item => {
                     const date = new Date(item.pubDate).toLocaleDateString('en-US', {
                         year: 'numeric', month: 'short', day: 'numeric'
                     });
-                    // Strip HTML tags from description and truncate
-                    const raw = item.description.replace(/<[^>]+>/g, '').replace(/&[^;]+;/g, ' ').trim();
-                    const excerpt = raw.length > 160 ? raw.substring(0, 160).trim() + '\u2026' : raw;
                     const tags = (item.categories || []).slice(0, 3)
                         .map(t => '<span class="article-tag">' + t + '</span>').join('');
 
-                    const card = document.createElement('a');
-                    card.href = item.link;
-                    card.target = '_blank';
-                    card.rel = 'noopener';
-                    card.className = 'article-card reveal';
-                    card.innerHTML =
+                    const a = document.createElement('a');
+                    a.href = item.link;
+                    a.target = '_blank';
+                    a.rel = 'noopener';
+                    a.className = 'article-item reveal';
+                    a.innerHTML =
                         '<span class="article-date">' + date + '</span>' +
-                        '<h3 class="article-title">' + item.title + '</h3>' +
-                        '<p class="article-excerpt">' + excerpt + '</p>' +
-                        '<div class="article-tags">' + tags + '</div>' +
-                        '<div class="article-footer"><i class="fab fa-medium"></i> Read on Medium</div>';
-                    grid.appendChild(card);
+                        '<div class="article-body">' +
+                            '<div class="article-title">' + item.title + '</div>' +
+                            '<div class="article-tags">' + tags + '</div>' +
+                        '</div>' +
+                        '<i class="fas fa-arrow-right article-arrow"></i>';
+                    list.appendChild(a);
                 });
-                // Observe newly added cards for scroll reveal
-                grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+                list.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
             })
             .catch(() => {
-                document.getElementById('articlesGrid').innerHTML =
-                    '<p style="text-align:center;color:var(--text-muted);grid-column:1/-1;padding:2rem;">' +
+                document.getElementById('articlesList').innerHTML =
+                    '<p style="text-align:center;color:var(--text-muted);padding:2rem;">' +
                     'Could not load articles. Visit <a href="https://timhanewich.medium.com/" target="_blank">Medium</a> directly.</p>';
             });
 
