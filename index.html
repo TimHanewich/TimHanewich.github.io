@@ -447,12 +447,17 @@
 
     <!-- Writings -->
     <section class="writings-section" id="writings">
-        <div class="writings-inner reveal">
+        <div class="section-header reveal">
             <h2 class="section-title">Writings</h2>
-            <div class="section-line" style="margin-bottom: 1.5rem;"></div>
-            <p>I write about machine learning, robotics, coding projects, and the things I learn along the way on Medium.</p>
+            <p class="section-subtitle">I write about machine learning, robotics, coding projects, and the things I learn along the way.</p>
+            <div class="section-line"></div>
+        </div>
+        <div class="articles-grid" id="articlesGrid">
+            <div class="articles-loading"><i class="fas fa-spinner fa-spin"></i>&ensp;Loading articles from Medium&hellip;</div>
+        </div>
+        <div class="writings-cta">
             <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" class="btn-primary">
-                <i class="fab fa-medium"></i> Read on Medium
+                <i class="fab fa-medium"></i> View All on Medium
             </a>
         </div>
     </section>
@@ -521,6 +526,45 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Fetch Medium articles via RSS
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@TimHanewich')
+            .then(res => res.json())
+            .then(data => {
+                if (data.status !== 'ok') throw new Error('RSS fetch failed');
+                const grid = document.getElementById('articlesGrid');
+                grid.innerHTML = '';
+                data.items.slice(0, 10).forEach(item => {
+                    const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                    });
+                    // Strip HTML tags from description and truncate
+                    const raw = item.description.replace(/<[^>]+>/g, '').replace(/&[^;]+;/g, ' ').trim();
+                    const excerpt = raw.length > 160 ? raw.substring(0, 160).trim() + '\u2026' : raw;
+                    const tags = (item.categories || []).slice(0, 3)
+                        .map(t => '<span class="article-tag">' + t + '</span>').join('');
+
+                    const card = document.createElement('a');
+                    card.href = item.link;
+                    card.target = '_blank';
+                    card.rel = 'noopener';
+                    card.className = 'article-card reveal';
+                    card.innerHTML =
+                        '<span class="article-date">' + date + '</span>' +
+                        '<h3 class="article-title">' + item.title + '</h3>' +
+                        '<p class="article-excerpt">' + excerpt + '</p>' +
+                        '<div class="article-tags">' + tags + '</div>' +
+                        '<div class="article-footer"><i class="fab fa-medium"></i> Read on Medium</div>';
+                    grid.appendChild(card);
+                });
+                // Observe newly added cards for scroll reveal
+                grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+            })
+            .catch(() => {
+                document.getElementById('articlesGrid').innerHTML =
+                    '<p style="text-align:center;color:var(--text-muted);grid-column:1/-1;padding:2rem;">' +
+                    'Could not load articles. Visit <a href="https://timhanewich.medium.com/" target="_blank">Medium</a> directly.</p>';
+            });
 
         // Project filtering
         function filterProjects(category) {
