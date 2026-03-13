@@ -37,6 +37,21 @@
         </button>
     </nav>
 
+    <!-- Sidebar (appears on scroll past hero) -->
+    <aside class="sidebar" id="sidebar">
+        <img src="images/timh-600x600.jpg" alt="Tim Hanewich" class="sidebar-avatar">
+        <div class="sidebar-name">Tim Hanewich</div>
+        <div class="sidebar-role">Software Engineer @ Microsoft</div>
+        <div class="sidebar-links">
+            <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+            <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
+            <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
+        </div>
+    </aside>
+
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-bg"></div>
@@ -514,6 +529,16 @@
                 navIcon.className = 'fas fa-bars';
             });
         });
+
+        // Sidebar: show when hero scrolls out of view
+        const sidebar = document.getElementById('sidebar');
+        const heroEl = document.getElementById('hero');
+        const sidebarObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                sidebar.classList.toggle('visible', !entry.isIntersecting);
+            });
+        }, { threshold: 0.05 });
+        sidebarObserver.observe(heroEl);
 
         // Scroll reveal with IntersectionObserver
         const revealObserver = new IntersectionObserver((entries) => {
