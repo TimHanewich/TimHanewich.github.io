@@ -443,6 +443,83 @@ a:hover {
     line-height: 1.5;
 }
 
+/* --- My Work @ Microsoft Tiles --- */
+.ms-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+}
+
+.ms-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-image: var(--tile-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ms-tile-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.7);
+    transition: background 0.4s ease;
+}
+
+.ms-tile:hover .ms-tile-overlay {
+    background: rgba(10, 10, 15, 0.85);
+}
+
+.ms-tile:hover {
+    border-color: var(--tile-glow, var(--accent-cyan));
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4),
+                0 0 30px color-mix(in srgb, var(--tile-glow, var(--accent-cyan)) 25%, transparent),
+                inset 0 0 30px color-mix(in srgb, var(--tile-glow, var(--accent-cyan)) 8%, transparent);
+    transform: translateY(-4px);
+}
+
+.ms-tile-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.ms-tile-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.ms-tile-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 320px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.35s ease;
+}
+
+.ms-tile:hover .ms-tile-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* --- Project Filters --- */
 .filter-bar {
     display: flex;
@@ -858,6 +935,19 @@ a:hover {
         max-width: 400px;
     }
 
+    .ms-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-tile {
+        height: 180px;
+    }
+
+    .ms-tile-desc {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -922,7 +1012,11 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .project-card {
-        padding: 1.25rem;
+    .ms-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-tile {
+        height: 160px;
     }
 }
