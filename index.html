@@ -209,7 +209,7 @@
         <div class="section-header reveal">
             <h2 class="section-title">Personal Project Highlights</h2>
             <p class="section-subtitle">A collection of things I've built - from AI agents and flight controllers to financial APIs and embedded systems.</p>
-            <a href="https://github.com/TimHanewich" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 1rem;">
+            <a href="https://github.com/TimHanewich" target="_blank" rel="noopener" class="btn-primary" id="ghRepoBtn" style="margin-top: 1rem;">
                 <i class="fab fa-github"></i> See all my projects on GitHub
             </a>
             <div class="section-line"></div>
@@ -510,6 +510,17 @@
     </footer>
 
     <script>
+        // Fetch public repo count from GitHub API
+        fetch('https://api.github.com/users/TimHanewich')
+            .then(r => r.json())
+            .then(data => {
+                if (data.public_repos) {
+                    const btn = document.getElementById('ghRepoBtn');
+                    btn.innerHTML = '<i class="fab fa-github"></i> See all my ' + data.public_repos + ' projects on GitHub';
+                }
+            })
+            .catch(() => {});
+
         // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
 
