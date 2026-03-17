@@ -272,7 +272,7 @@
                 <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
             </a>
 
-            <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics">
+            <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/6TYY0Nv.png">
                 <div class="project-card-header">
                     <span class="project-tag" data-cat="robotics">Robotics</span>
                     <span class="project-year">2025</span>
@@ -520,6 +520,11 @@
                 }
             })
             .catch(() => {});
+
+        // Set hover background images from data attributes
+        document.querySelectorAll('.project-card[data-hover-img]').forEach(card => {
+            card.style.setProperty('--hover-img', 'url(' + card.dataset.hoverImg + ')');
+        });
 
         // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
