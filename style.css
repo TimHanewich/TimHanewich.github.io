@@ -451,7 +451,7 @@ a:hover {
     justify-items: center;
 }
 
-.ms-tiles .ms-tile:last-child {
+.ms-tiles .ms-tile:nth-child(3n+1):last-child {
     grid-column: 2;
 }
 
