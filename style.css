@@ -800,6 +800,17 @@ a:hover {
     opacity: 0.25;
 }
 
+.featured-media-video {
+    display: flex;
+}
+
+.featured-media-video iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+}
+
 .featured-body {
     padding: 2rem 2.25rem;
     display: flex;
@@ -881,6 +892,9 @@ a:hover {
     .featured-card:nth-child(even) .featured-media { order: 0; }
     .featured-card:nth-child(even) .featured-body  { order: 0; }
     .featured-media {
+        min-height: 220px;
+    }
+    .featured-media-video iframe {
         min-height: 220px;
     }
     .featured-body {
