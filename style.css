@@ -716,6 +716,181 @@ a:hover {
 .project-card[data-category="software"]:hover { box-shadow: 0 10px 35px rgba(168, 85, 247, 0.1); }
 .project-card[data-category="gaming"]:hover { box-shadow: 0 10px 35px rgba(236, 72, 153, 0.1); }
 
+/* --- Featured Project Showcases --- */
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+.featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--card-accent, var(--accent-gradient));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.featured-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.featured-card:hover::before {
+    opacity: 1;
+}
+
+/* Alternate layout: even cards flip image to right */
+.featured-card:nth-child(even) .featured-media { order: 2; }
+.featured-card:nth-child(even) .featured-body  { order: 1; }
+
+/* Card accent colors */
+.featured-card[data-category="robotics"] { --card-accent: var(--cat-robotics); }
+.featured-card[data-category="ai"]       { --card-accent: var(--cat-ai); }
+.featured-card[data-category="finance"]  { --card-accent: var(--cat-finance); }
+.featured-card[data-category="iot"]      { --card-accent: var(--cat-iot); }
+
+.featured-media {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    background: var(--bg-secondary);
+}
+
+.featured-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .featured-media img {
+    transform: scale(1.03);
+}
+
+.featured-media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+}
+
+.featured-media-placeholder i {
+    font-size: 4rem;
+    color: var(--placeholder-accent, var(--text-muted));
+    opacity: 0.25;
+}
+
+.featured-body {
+    padding: 2rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.featured-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.featured-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+
+.featured-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.featured-highlights span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.featured-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.featured-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    padding: 0.4rem 0;
+    transition: color 0.2s;
+}
+
+.featured-links a:hover {
+    color: #fff;
+}
+
+.featured-links a i {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+    .featured-card:nth-child(even) .featured-media { order: 0; }
+    .featured-card:nth-child(even) .featured-body  { order: 0; }
+    .featured-media {
+        min-height: 220px;
+    }
+    .featured-body {
+        padding: 1.5rem;
+    }
+    .featured-title {
+        font-size: 1.25rem;
+    }
+}
+
 /* --- Writings Section --- */
 .writings-section {
     background: var(--bg-secondary);

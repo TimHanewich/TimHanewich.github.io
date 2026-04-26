@@ -201,195 +201,113 @@
     <!-- Projects -->
     <section class="section" id="projects">
         <div class="section-header reveal">
-            <h2 class="section-title">Personal Project Highlights</h2>
-            <p class="section-subtitle">A few highlights of what I've built - from AI agents and flight controllers to financial APIs and embedded systems.</p>
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">A closer look at a few projects I'm most proud of — from custom-built drones to financial data platforms.</p>
             <a href="https://github.com/TimHanewich" target="_blank" rel="noopener" class="btn-primary" id="ghRepoBtn" style="margin-top: 1rem;">
                 <i class="fab fa-github"></i> See all my projects on GitHub
             </a>
             <div class="section-line"></div>
         </div>
 
-        <!-- Filter Bar -->
-        <div class="filter-bar reveal">
-            <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">All</button>
-            <button class="filter-btn" data-filter="robotics" onclick="filterProjects('robotics')">Robotics</button>
-            <button class="filter-btn" data-filter="ai" onclick="filterProjects('ai')">AI &amp; ML</button>
-            <button class="filter-btn" data-filter="finance" onclick="filterProjects('finance')">Finance</button>
-            <button class="filter-btn" data-filter="iot" onclick="filterProjects('iot')">IoT</button>
-            <button class="filter-btn" data-filter="microsoft" onclick="filterProjects('microsoft')">Microsoft</button>
+        <!-- Featured Projects -->
+        <div class="featured-projects">
 
-            <button class="filter-btn" data-filter="gaming" onclick="filterProjects('gaming')">Gaming</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-grid" id="projectsGrid">
-
-            <!-- ===== 2025 ===== -->
-
-            <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/OJtSyqB.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="robotics">Robotics</span>
-                    <span class="project-year">2025</span>
+            <!-- Centauri Flight Controller -->
+            <div class="featured-card reveal" data-category="robotics">
+                <div class="featured-media">
+                    <img src="https://i.imgur.com/8PIMXgb.jpeg" alt="Centauri custom quadcopter" loading="lazy">
                 </div>
-                <h3 class="project-card-title">Centauri Flight Controller</h3>
-                <p class="project-card-desc">Quadcopter flight controller, 3D-printed drone frame, PC-based controller code, and more.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=8QopB0LM2to" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/7GkI09Q.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="robotics">Robotics</span>
-                    <span class="project-year">2025</span>
+                <div class="featured-body">
+                    <div class="featured-header">
+                        <span class="project-tag" data-cat="robotics">Robotics</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3 class="featured-title">Centauri Flight Controller</h3>
+                    <p class="featured-desc">A complete, end-to-end custom quadcopter system built entirely from scratch. At its core is a MicroPython-based flight controller running on a $4 Raspberry Pi Pico. The 3D-printed airframe, custom binary radio protocol, Xbox-controller-based transmitter, and onboard telemetry logging &amp; analysis tools are all original &mdash; no off-the-shelf flight controller involved.</p>
+                    <div class="featured-highlights">
+                        <span>MicroPython</span>
+                        <span>Raspberry Pi Pico</span>
+                        <span>3D-Printed Frame</span>
+                        <span>Custom Radio Protocol</span>
+                        <span>~$132 USD Build</span>
+                    </div>
+                    <div class="featured-links">
+                        <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.youtube.com/watch?v=4ocy2szvcbM" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Watch Demo</a>
+                    </div>
                 </div>
-                <h3 class="project-card-title">eBike Conversion</h3>
-                <p class="project-card-desc">Strapped a 5,000-watt brushless motor onto an old Schwinn bicycle and designed the full electronics package.</p>
-                <div class="project-card-footer"><i class="fab fa-youtube"></i> Watch on YouTube</div>
-            </a>
+            </div>
 
-            <a href="https://github.com/TimHanewich/TimHanewich.Foundry" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
-                    <span class="project-year">2025</span>
+            <!-- Aletheia -->
+            <div class="featured-card reveal" data-category="finance">
+                <div class="featured-media featured-media-placeholder" style="--placeholder-accent: var(--cat-finance);">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <h3 class="project-card-title">TimHanewich.Foundry</h3>
-                <p class="project-card-desc">.NET library for interfacing with LLM deployments in Microsoft Foundry.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-
-            <a href="https://github.com/TimHanewich/AIDA" target="_blank" rel="noopener" class="project-card reveal" data-category="ai" data-hover-img="https://i.imgur.com/824qYfQ.png">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
-                    <span class="project-year">2025</span>
+                <div class="featured-body">
+                    <div class="featured-header">
+                        <span class="project-tag" data-cat="finance">Finance</span>
+                        <span class="project-year">2021</span>
+                    </div>
+                    <h3 class="featured-title">Aletheia</h3>
+                    <p class="featured-desc">A financial data API that ingested and processed over 1.2 million SEC filings and 3.3 million insider trading transactions, serving them through a clean REST interface. Earned a Microsoft-certified Power Platform connector, enabling direct integration with enterprise workflows in Power Apps and Power Automate.</p>
+                    <div class="featured-highlights">
+                        <span>REST API</span>
+                        <span>1.2M SEC Filings</span>
+                        <span>3.3M Insider Trades</span>
+                        <span>Power Platform Connector</span>
+                    </div>
+                    <div class="featured-links">
+                        <a href="https://aletheiaapi.com/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                    </div>
                 </div>
-                <h3 class="project-card-title">AIDA</h3>
-                <p class="project-card-desc">Lightweight AI desktop assistant that connects generative AI to your console, enabling interaction with LLMs and desktop resources.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
+            </div>
 
-
-
-            <!-- ===== 2024 ===== -->
-
-            <a href="https://github.com/TimHanewich/PYPER2" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/St3y8sw.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="robotics">Robotics</span>
-                    <span class="project-year">2024</span>
+            <!-- Tetris AI -->
+            <div class="featured-card reveal" data-category="ai">
+                <div class="featured-media">
+                    <img src="https://i.imgur.com/CCDpuFi.gif" alt="Tetris AI agent playing Tetris" loading="lazy">
                 </div>
-                <h3 class="project-card-title">PYPER 2</h3>
-                <p class="project-card-desc">Evolved iteration of the PYPER rover platform featuring LoRa-based communication and an improved mechanical design.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-            <a href="https://github.com/TimHanewich/ranger" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/Hpy5jZg.jpeg">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="robotics">Robotics</span>
-                    <span class="project-year">2024</span>
+                <div class="featured-body">
+                    <div class="featured-header">
+                        <span class="project-tag" data-cat="ai">AI &amp; ML</span>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <h3 class="featured-title">Tetris AI</h3>
+                    <p class="featured-desc">A reinforcement learning agent trained with Q-Learning to play a simplified version of Tetris. The AI learns optimal piece-placement strategies through thousands of episodes of self-play, gradually improving its ability to clear lines and manage the board.</p>
+                    <div class="featured-highlights">
+                        <span>Q-Learning</span>
+                        <span>Reinforcement Learning</span>
+                        <span>Python</span>
+                    </div>
+                    <div class="featured-links">
+                        <a href="https://github.com/TimHanewich/tetris-ai-mini" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
                 </div>
-                <h3 class="project-card-title">Ranger</h3>
-                <p class="project-card-desc">Long-range endurance rover designed for global remote control via the web, using Azure Queue Storage for bidirectional communication.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
+            </div>
 
-            <a href="https://github.com/TimHanewich/tetris-ai-mini" target="_blank" rel="noopener" class="project-card reveal" data-category="ai" data-hover-img="https://i.imgur.com/CCDpuFi.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
-                    <span class="project-year">2024</span>
+            <!-- Motorcycle Smart Jacket -->
+            <div class="featured-card reveal" data-category="iot">
+                <div class="featured-media">
+                    <img src="https://i.imgur.com/QXtxmo8.gif" alt="Motorcycle Smart Jacket illuminating during a ride" loading="lazy">
                 </div>
-                <h3 class="project-card-title">Tetris AI</h3>
-                <p class="project-card-desc">Use of Q-Learning, a reinforcement learning technique, to train an AI agent to play a simplified version of Tetris.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-
-
-
-            <!-- ===== 2023 ===== -->
-
-            <a href="https://timhanewich.medium.com/taking-flight-with-the-raspberry-pi-pico-micropython-diy-quadcopter-drone-61ed4f7ee746" target="_blank" rel="noopener" class="project-card reveal" data-category="robotics" data-hover-img="https://i.imgur.com/x0gKJZp.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="robotics">Robotics</span>
-                    <span class="project-year">2023</span>
+                <div class="featured-body">
+                    <div class="featured-header">
+                        <span class="project-tag" data-cat="iot">IoT</span>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <h3 class="featured-title">Motorcycle Smart Jacket</h3>
+                    <p class="featured-desc">A GPS-enabled wearable for motorcyclists that improves rider visibility by automatically illuminating LED arrays during high-risk moments &mdash; like hard braking, turning at intersections, or riding at night. Built with embedded microcontrollers and real-time GPS data processing.</p>
+                    <div class="featured-highlights">
+                        <span>GPS</span>
+                        <span>Wearable IoT</span>
+                        <span>LED Arrays</span>
+                        <span>Embedded Systems</span>
+                    </div>
+                    <div class="featured-links">
+                        <a href="https://www.youtube.com/watch?v=AxWjqtQHraE" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Watch Video</a>
+                    </div>
                 </div>
-                <h3 class="project-card-title">Scout Flight Controller</h3>
-                <p class="project-card-desc">Custom-developed quadcopter drone flight controller firmware running on a $4 Raspberry Pi Pico microcontroller.</p>
-                <div class="project-card-footer"><i class="fab fa-medium"></i> Read on Medium</div>
-            </a>
-
-            <a href="https://github.com/TimHanewich/Baseball-Betting-NN" target="_blank" rel="noopener" class="project-card reveal" data-category="ai">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="ai">AI &amp; ML</span>
-                    <span class="project-year">2023</span>
-                </div>
-                <h3 class="project-card-title">MLB Betting Line Predictor</h3>
-                <p class="project-card-desc">A TensorFlow neural network that analyzes baseball game data to predict betting lines and win probabilities in real time.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=AxWjqtQHraE" target="_blank" rel="noopener" class="project-card reveal" data-category="iot" data-hover-img="https://i.imgur.com/QXtxmo8.gif">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="iot">IoT</span>
-                    <span class="project-year">2023</span>
-                </div>
-                <h3 class="project-card-title">Motorcycle Smart Jacket</h3>
-                <p class="project-card-desc">GPS-enabled jacket for motorcyclists that improves visibility by illuminating at specific high-risk moments.</p>
-                <div class="project-card-footer"><i class="fab fa-youtube"></i> Watch Video</div>
-            </a>
-
-
-
-            <!-- ===== 2022 ===== -->
-
-            <a href="https://github.com/TimHanewich/TimHanewich.Dataverse" target="_blank" rel="noopener" class="project-card reveal" data-category="microsoft">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="microsoft">Microsoft</span>
-                    <span class="project-year">2022</span>
-                </div>
-                <h3 class="project-card-title">TimHanewich.Dataverse</h3>
-                <p class="project-card-desc">Lightweight .NET library for simplified authentication and interaction with Microsoft Dataverse.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-
-
-            <a href="https://github.com/TimHanewich/TimHanewich.Chess" target="_blank" rel="noopener" class="project-card reveal" data-category="gaming">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="gaming">Gaming</span>
-                    <span class="project-year">2022</span>
-                </div>
-                <h3 class="project-card-title">TimHanewich.Chess</h3>
-                <p class="project-card-desc">Chess positional evaluation engine written in .NET (C#), implementing Mini-Max with Alpha-Beta pruning.</p>
-                <div class="project-card-footer"><i class="fab fa-github"></i> View on GitHub</div>
-            </a>
-
-            <!-- ===== 2021 ===== -->
-
-            <a href="https://aletheiaapi.com/" target="_blank" rel="noopener" class="project-card reveal" data-category="finance">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="finance">Finance</span>
-                    <span class="project-year">2021</span>
-                </div>
-                <h3 class="project-card-title">Aletheia</h3>
-                <p class="project-card-desc">Financial data API with a Microsoft-certified Power Platform Connector. Processed 1.2M SEC filings and 3.3M insider trades.</p>
-                <div class="project-card-footer"><i class="fas fa-external-link-alt"></i> Visit Site</div>
-            </a>
-
-            <!-- ===== 2020 ===== -->
-
-
-            <!-- ===== 2019 ===== -->
-
-
-
-            <a href="https://apps.microsoft.com/store/detail/apex-visual/9P5BLJV6W9B5" target="_blank" rel="noopener" class="project-card reveal" data-category="gaming">
-                <div class="project-card-header">
-                    <span class="project-tag" data-cat="gaming">Gaming</span>
-                    <span class="project-year">2019</span>
-                </div>
-                <h3 class="project-card-title">Apex Visual</h3>
-                <p class="project-card-desc">Windows app for live telemetry display, coaching, and driving analysis for the official F1 video game. 20,000+ downloads.</p>
-                <div class="project-card-footer"><i class="fab fa-microsoft"></i> View in Store</div>
-            </a>
+            </div>
 
         </div>
     </section>
@@ -435,11 +353,6 @@
                 }
             })
             .catch(() => {});
-
-        // Set hover background images from data attributes
-        document.querySelectorAll('.project-card[data-hover-img]').forEach(card => {
-            card.style.setProperty('--hover-img', 'url(' + card.dataset.hoverImg + ')');
-        });
 
         // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -544,25 +457,6 @@
                     'Could not load articles. Visit <a href="https://timhanewich.medium.com/" target="_blank">Medium</a> directly.</p>';
             });
 
-        // Project filtering
-        function filterProjects(category) {
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                const match = category === 'all' || card.dataset.category === category;
-                card.style.display = match ? '' : 'none';
-                if (match) {
-                    card.style.opacity = '0';
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
-                            card.style.opacity = '1';
-                        });
-                    });
-                }
-            });
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.filter === category);
-            });
-        }
     </script>
 
 </body>
