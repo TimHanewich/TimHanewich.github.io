@@ -721,7 +721,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    max-width: 1060px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -773,7 +773,6 @@ a:hover {
 .featured-media {
     position: relative;
     overflow: hidden;
-    min-height: 320px;
     background: var(--bg-secondary);
 }
 
@@ -808,12 +807,11 @@ a:hover {
 .featured-media-video iframe {
     width: 100%;
     height: 100%;
-    min-height: 320px;
     border: 0;
 }
 
 .featured-body {
-    padding: 2rem 2.25rem;
+    padding: 1.75rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -893,10 +891,7 @@ a:hover {
     .featured-card:nth-child(even) .featured-media { order: 0; }
     .featured-card:nth-child(even) .featured-body  { order: 0; }
     .featured-media {
-        min-height: 220px;
-    }
-    .featured-media-video iframe {
-        min-height: 220px;
+        aspect-ratio: 16 / 9;
     }
     .featured-body {
         padding: 1.5rem;
