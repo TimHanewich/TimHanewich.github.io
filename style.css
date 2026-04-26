@@ -721,13 +721,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    max-width: 960px;
+    max-width: 1060px;
     margin: 0 auto;
 }
 
 .featured-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -760,6 +760,7 @@ a:hover {
 }
 
 /* Alternate layout: even cards flip image to right */
+.featured-card:nth-child(even) { grid-template-columns: 2fr 3fr; }
 .featured-card:nth-child(even) .featured-media { order: 2; }
 .featured-card:nth-child(even) .featured-body  { order: 1; }
 
