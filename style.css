@@ -695,6 +695,11 @@ a:hover {
 
     .hero-text {
         align-items: center;
+        order: 2;
+    }
+
+    .hero-portrait {
+        order: 1;
     }
 
     .hero-portrait img {
@@ -798,7 +803,8 @@ a:hover {
         aspect-ratio: 16 / 10;
     }
 
-    .featured-card {
+    .featured-card,
+    .featured-card:nth-child(even) {
         grid-template-columns: 1fr;
     }
 
