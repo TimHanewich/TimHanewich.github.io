@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Tim</title>
+    <title>Tim Hanewich</title>
     <meta name="description" content="Personal portfolio of Tim Hanewich. AI agents, autonomous robots, open-source tools, and more.">
     <link rel="icon" type="image/svg" href="https://i.imgur.com/BXBxPjw.png">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -25,319 +25,286 @@
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <a href="#" class="nav-logo">Tim Hanewich</a>
+        <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Tim Hanewich</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#microsoft">Microsoft</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writings">Writings</a></li>
-            <li><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Connect</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <i class="fas fa-bars" id="navIcon"></i>
         </button>
     </nav>
 
-    <!-- Sidebar (appears on scroll past hero) -->
-    <aside class="sidebar" id="sidebar">
-        <img src="images/timh-600x600.jpg" alt="Tim Hanewich" class="sidebar-avatar">
-        <div class="sidebar-name">Tim Hanewich</div>
-        <div class="sidebar-role">AI Solution Engineer @ Microsoft</div>
-        <div class="sidebar-links">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="hero-eyebrow">AI Solution Engineer &middot; Microsoft</span>
+                <h1 class="hero-title">Tim<br>Hanewich<span class="hero-dot">.</span></h1>
+                <p class="hero-subtitle">Building AI agents, autonomous robots, and open-source tools.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#about" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-portrait">
+                <img src="images/timh-600x600.jpg" alt="Tim Hanewich">
+            </div>
+        </div>
+        <div class="hero-social">
             <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
             <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
             <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
             <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
-        </div>
-    </aside>
-
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <img src="images/timh-600x600.jpg" alt="Tim Hanewich" class="hero-avatar reveal">
-            <h1 class="hero-name reveal reveal-delay-1">
-                Hi, I'm <span class="gradient">Tim Hanewich</span>
-            </h1>
-            <p class="hero-tagline reveal reveal-delay-2">
-                Building AI agents, autonomous robots, and open-source tools.
-            </p>
-            <p class="hero-bio reveal reveal-delay-3">
-                AI Solution Engineer at Microsoft empowering State &amp; Local Government with the Power Platform. Beyond work, I'm constantly building - from quadcopter flight controllers and 3D-printed rovers to neural networks and AI agent frameworks.
-            </p>
-            <div class="social-links reveal reveal-delay-4">
-                <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
-                <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
-                <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
-                <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- About -->
     <section class="section" id="about">
-        <div class="section-header reveal">
-            <h2 class="section-title">About</h2>
-            <div class="section-line"></div>
-        </div>
-        <p class="about-text reveal">
-            At Microsoft, I work with State &amp; Local Government agencies, empowering them with digital solutions on the Power Platform. Outside of work, I'm driven by a passion for building - whether it's AI agents that reason and act, quadcopter drones that stabilize themselves mid-air, or 3D-printed rovers that explore autonomously.
-        </p>
-        <div class="about-cards reveal">
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fab fa-microsoft"></i></div>
-                <h3 class="about-card-title">Microsoft</h3>
-                <p class="about-card-desc">AI Business Process<br>U.S. SLED</p>
-            </div>
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3 class="about-card-title">UCF - 4.0 GPA</h3>
-                <p class="about-card-desc">B.S.B.A. Business<br>Summa Cum Laude</p>
-            </div>
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-code-branch"></i></div>
-                <h3 class="about-card-title">Open Source</h3>
-                <p class="about-card-desc">30+ projects across AI, robotics, finance &amp; more</p>
+        <div class="section-inner">
+            <span class="eyebrow reveal">About</span>
+            <h2 class="section-title reveal">Engineer, builder, creator.</h2>
+            <p class="section-body reveal">
+                At Microsoft, I work with State &amp; Local Government agencies, empowering them with digital solutions on the Power Platform. Outside of work, I&rsquo;m driven by a passion for building &mdash; whether it&rsquo;s AI agents that reason and act, quadcopter drones that stabilize themselves mid-air, or 3D-printed rovers that explore autonomously.
+            </p>
+            <div class="about-cards reveal">
+                <div class="about-card">
+                    <div class="about-card-icon"><i class="fab fa-microsoft"></i></div>
+                    <h3 class="about-card-title">Microsoft</h3>
+                    <p class="about-card-desc">AI Business Process<br>U.S. SLED</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="about-card-title">UCF &mdash; 4.0 GPA</h3>
+                    <p class="about-card-desc">B.S.B.A. Business<br>Summa Cum Laude</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 class="about-card-title">Open Source</h3>
+                    <p class="about-card-desc">30+ projects across AI, robotics, finance &amp; more</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- My Work @ Microsoft -->
-    <section class="section" id="microsoft">
-        <div class="section-header reveal">
-            <h2 class="section-title">My Work @ <span class="gradient">Microsoft</span></h2>
-            <p class="section-subtitle">As an AI Solution Engineer, I partner with State &amp; Local Government agencies to design and deliver transformative solutions on the Microsoft Power Platform, translating complex technology into real business value.</p>
-            <div class="section-line"></div>
-        </div>
+    <!-- Microsoft -->
+    <section class="section section-alt" id="microsoft">
+        <div class="section-inner">
+            <span class="eyebrow reveal">Microsoft</span>
+            <h2 class="section-title reveal">My Work @ Microsoft</h2>
+            <p class="section-body reveal">As an AI Solution Engineer, I partner with State &amp; Local Government agencies to design and deliver transformative solutions on the Microsoft Power Platform, translating complex technology into real business value.</p>
 
-        <div class="ms-tiles reveal">
+            <div class="ms-tiles reveal">
 
-            <a class="ms-tile" style="--tile-glow: #f5c518; --tile-bg: url('https://i.imgur.com/p8dRTPt.png'); cursor: default;">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">Microsoft Gold Club</h3>
-                    <p class="ms-tile-desc">FY24 Gold Club recipient, recognized for advancing AI adoption across U.S. State &amp; Local Government through innovative solutions, accelerators, and a unified &ldquo;One Microsoft&rdquo; approach.</p>
-                </div>
-            </a>
+                <a class="ms-tile" style="--tile-bg: url('https://i.imgur.com/p8dRTPt.png'); cursor: default;">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">Microsoft Gold Club</h3>
+                        <p class="ms-tile-desc">FY24 Gold Club recipient, recognized for advancing AI adoption across U.S. State &amp; Local Government.</p>
+                    </div>
+                </a>
 
-            <a href="https://github.com/github/awesome-copilot/tree/main/plugins/power-platform-architect" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #06b6d4; --tile-bg: url('https://i.imgur.com/rIJLfiL.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">Power Platform Architect</h3>
-                    <p class="ms-tile-desc">A GitHub Copilot agent skill that acts as a Senior Solution Architect - give it business requirements or meeting transcripts and it produces a tailored Power Platform architecture.</p>
-                </div>
-            </a>
+                <a href="https://github.com/github/awesome-copilot/tree/main/plugins/power-platform-architect" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/rIJLfiL.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">Power Platform Architect</h3>
+                        <p class="ms-tile-desc">A GitHub Copilot agent skill that acts as a Senior Solution Architect for Power Platform.</p>
+                    </div>
+                </a>
 
-            <a href="https://timhanewich.medium.com/build-your-first-power-apps-code-app-c4b7074f7457" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #22c55e; --tile-bg: url('https://i.imgur.com/0nLHKiE.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">Your First Code App</h3>
-                    <p class="ms-tile-desc">A step-by-step guide to building your first Power Apps Code App - from scaffolding a React project to deploying it as a fully integrated Power Platform application.</p>
-                </div>
-            </a>
+                <a href="https://timhanewich.medium.com/build-your-first-power-apps-code-app-c4b7074f7457" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/0nLHKiE.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">Your First Code App</h3>
+                        <p class="ms-tile-desc">A step-by-step guide to building your first Power Apps Code App with React.</p>
+                    </div>
+                </a>
 
-            <a href="https://www.youtube.com/watch?v=64dZ1Ksk_90" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #ec4899; --tile-bg: url('https://i.imgur.com/GrxJ83a.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">AI-Enabling Your Agency</h3>
-                    <p class="ms-tile-desc">A 3-step framework I developed to help State &amp; Local Government leaders strategically embrace AI to solve real business challenges.</p>
-                </div>
-            </a>
+                <a href="https://www.youtube.com/watch?v=64dZ1Ksk_90" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/GrxJ83a.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">AI-Enabling Your Agency</h3>
+                        <p class="ms-tile-desc">A 3-step framework to help government leaders strategically embrace AI.</p>
+                    </div>
+                </a>
 
-            <a href="https://vimeo.com/925448651/1e70ff3dbd?share=copy" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #3b82f6; --tile-bg: url('https://i.imgur.com/j3Il83M.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">Low-Code for the Pro-Code Dev</h3>
-                    <p class="ms-tile-desc">Presented at the Federal Business Applications Summit on how pro-code developers can leverage their skills to thrive in the Power Platform low-code ecosystem.</p>
-                </div>
-            </a>
-            
-            <a href="https://learn.microsoft.com/en-us/power-platform/architecture/solution-ideas/app-evvie" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #00d4ff; --tile-bg: url('https://i.imgur.com/8dDqWI5.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">AI-Assisted Vehicle Inspection</h3>
-                    <p class="ms-tile-desc">An AI-powered vehicle inspection platform that uses multimodal image understanding to automatically detect and classify damage to government fleet vehicles.</p>
-                </div>
-            </a>
+                <a href="https://vimeo.com/925448651/1e70ff3dbd?share=copy" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/j3Il83M.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">Low-Code for Pro-Code</h3>
+                        <p class="ms-tile-desc">Presented at the Federal Business Applications Summit on Power Platform for developers.</p>
+                    </div>
+                </a>
 
-            <a href="https://github.com/microsoft/SLG-Business-Applications" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #a855f7; --tile-bg: url('https://i.imgur.com/U1mgUL7.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">SLG Business Applications</h3>
-                    <p class="ms-tile-desc">An open-source GitHub repo of Power Platform demos, whitepapers, and resources I help maintain for the State &amp; Local Government community.</p>
-                </div>
-            </a>
+                <a href="https://learn.microsoft.com/en-us/power-platform/architecture/solution-ideas/app-evvie" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/8dDqWI5.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">AI Vehicle Inspection</h3>
+                        <p class="ms-tile-desc">An AI-powered platform using multimodal image understanding for fleet vehicle damage detection.</p>
+                    </div>
+                </a>
 
-            <a href="https://www.youtube.com/watch?v=Dt-WB8L5an8" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #3b82f6; --tile-bg: url('https://i.imgur.com/KuHeaQd.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">AI in Law Enforcement</h3>
-                    <p class="ms-tile-desc">Led a webinar showcasing how Microsoft AI and Power Platform technologies can assist law enforcement agencies in serving and protecting public communities.</p>
-                </div>
-            </a>
+                <a href="https://github.com/microsoft/SLG-Business-Applications" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/U1mgUL7.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">SLG Business Applications</h3>
+                        <p class="ms-tile-desc">Open-source Power Platform demos and resources for State &amp; Local Government.</p>
+                    </div>
+                </a>
 
-            <a href="https://www.youtube.com/watch?v=N07bm8hnp_0" target="_blank" rel="noopener" class="ms-tile" style="--tile-glow: #f97316; --tile-bg: url('https://i.imgur.com/PcZZevZ.png');">
-                <div class="ms-tile-overlay"></div>
-                <div class="ms-tile-content">
-                    <h3 class="ms-tile-title">Power Platform &times; IoT Car</h3>
-                    <p class="ms-tile-desc">Controlled a 3D-printed car with a Power App and on-premises data gateway - showcasing Power Platform's ability to interface with physical hardware.</p>
-                </div>
-            </a>
+                <a href="https://www.youtube.com/watch?v=Dt-WB8L5an8" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/KuHeaQd.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">AI in Law Enforcement</h3>
+                        <p class="ms-tile-desc">Webinar showcasing Microsoft AI and Power Platform for law enforcement agencies.</p>
+                    </div>
+                </a>
 
-            
+                <a href="https://www.youtube.com/watch?v=N07bm8hnp_0" target="_blank" rel="noopener" class="ms-tile" style="--tile-bg: url('https://i.imgur.com/PcZZevZ.png');">
+                    <div class="ms-tile-img"></div>
+                    <div class="ms-tile-content">
+                        <h3 class="ms-tile-title">Power Platform &times; IoT Car</h3>
+                        <p class="ms-tile-desc">Controlled a 3D-printed car with a Power App and on-premises data gateway.</p>
+                    </div>
+                </a>
 
+            </div>
         </div>
     </section>
 
     <!-- Projects -->
     <section class="section" id="projects">
-        <div class="section-header reveal">
-            <h2 class="section-title">Featured Work</h2>
-            <p class="section-subtitle">A closer look at a few projects I'm most proud of — from custom-built drones to financial data platforms.</p>
-            <a href="https://github.com/TimHanewich" target="_blank" rel="noopener" class="btn-primary" id="ghRepoBtn" style="margin-top: 1rem;">
+        <div class="section-inner">
+            <span class="eyebrow reveal">Projects</span>
+            <h2 class="section-title reveal">Featured Work</h2>
+            <p class="section-body reveal">A closer look at a few projects I&rsquo;m most proud of &mdash; from custom-built drones to financial data platforms.</p>
+            <a href="https://github.com/TimHanewich" target="_blank" rel="noopener" class="btn-primary reveal" id="ghRepoBtn" style="margin-bottom: 3rem;">
                 <i class="fab fa-github"></i> See all my projects on GitHub
             </a>
-            <div class="section-line"></div>
-        </div>
 
-        <!-- Featured Projects -->
-        <div class="featured-projects">
+            <!-- Featured Projects -->
+            <div class="featured-projects">
 
-            <!-- Centauri Flight Controller -->
-            <div class="featured-card reveal" data-category="robotics">
-                <div class="featured-media featured-media-video">
-                    <iframe src="https://www.youtube.com/embed/4ocy2szvcbM" title="Centauri Flight Controller Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="featured-body">
-                    <div class="featured-header">
-                        <span class="project-tag" data-cat="robotics">Robotics</span>
-                        <span class="project-year">2025</span>
+                <!-- Centauri Flight Controller -->
+                <div class="featured-card reveal">
+                    <div class="featured-media featured-media-video">
+                        <iframe src="https://www.youtube.com/embed/4ocy2szvcbM" title="Centauri Flight Controller Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    <h3 class="featured-title">Centauri Flight Controller</h3>
-                    <p class="featured-desc">A complete, end-to-end custom quadcopter system built entirely from scratch. At its core is a MicroPython-based flight controller running on a $4 Raspberry Pi Pico. The 3D-printed airframe, custom binary radio protocol, Xbox-controller-based transmitter, and onboard telemetry logging &amp; analysis tools are all original &mdash; no off-the-shelf flight controller involved.</p>
-                    <div class="featured-highlights">
-                        <span>MicroPython</span>
-                        <span>Raspberry Pi Pico</span>
-                        <span>3D-Printed Frame</span>
-                        <span>Custom Radio Protocol</span>
-                        <span>~$132 USD Build</span>
-                    </div>
-                    <div class="featured-links">
-                        <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <div class="featured-body">
+                        <span class="featured-tag">Robotics</span>
+                        <h3 class="featured-title">Centauri Flight Controller</h3>
+                        <p class="featured-desc">A complete, end-to-end custom quadcopter system built entirely from scratch. MicroPython-based flight controller on a $4 Raspberry Pi Pico with 3D-printed airframe, custom binary radio protocol, Xbox-controller transmitter, and onboard telemetry.</p>
+                        <div class="featured-highlights">
+                            <span>MicroPython</span>
+                            <span>Raspberry Pi Pico</span>
+                            <span>3D-Printed Frame</span>
+                            <span>Custom Radio Protocol</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/TimHanewich/centauri" target="_blank" rel="noopener" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Aletheia -->
+                <div class="featured-card reveal">
+                    <div class="featured-media">
+                        <img src="https://i.imgur.com/bYk93Nt.png" alt="Aletheia financial data API" loading="lazy">
+                    </div>
+                    <div class="featured-body">
+                        <span class="featured-tag">Finance</span>
+                        <h3 class="featured-title">Aletheia</h3>
+                        <p class="featured-desc">A financial data API that ingested and processed over 1.2 million SEC filings and 3.3 million insider trading transactions. Earned a Microsoft-certified Power Platform connector for enterprise integration.</p>
+                        <div class="featured-highlights">
+                            <span>REST API</span>
+                            <span>Financial Data</span>
+                            <span>Power Platform Connector</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://aletheiaapi.com/" target="_blank" rel="noopener" class="btn-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tetris AI -->
+                <div class="featured-card reveal">
+                    <div class="featured-media">
+                        <img src="https://i.imgur.com/CCDpuFi.gif" alt="Tetris AI agent playing Tetris" loading="lazy">
+                    </div>
+                    <div class="featured-body">
+                        <span class="featured-tag">AI &amp; ML</span>
+                        <h3 class="featured-title">Tetris AI</h3>
+                        <p class="featured-desc">A reinforcement learning agent trained with Q-Learning to play Tetris. The AI learns optimal piece-placement strategies through thousands of episodes of self-play, gradually improving its line-clearing ability.</p>
+                        <div class="featured-highlights">
+                            <span>Q-Learning</span>
+                            <span>Reinforcement Learning</span>
+                            <span>Neural Network</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/TimHanewich/tetris-ai-mini" target="_blank" rel="noopener" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motorcycle Smart Jacket -->
+                <div class="featured-card reveal">
+                    <div class="featured-media">
+                        <img src="https://i.imgur.com/QXtxmo8.gif" alt="Motorcycle Smart Jacket" loading="lazy">
+                    </div>
+                    <div class="featured-body">
+                        <span class="featured-tag">IoT</span>
+                        <h3 class="featured-title">Motorcycle Smart Jacket</h3>
+                        <p class="featured-desc">A GPS-enabled wearable for motorcyclists that improves rider visibility by automatically illuminating LED arrays during high-risk moments &mdash; hard braking, turning at intersections, or riding at night.</p>
+                        <div class="featured-highlights">
+                            <span>GPS</span>
+                            <span>Wearable IoT</span>
+                            <span>Embedded Systems</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://www.youtube.com/watch?v=AxWjqtQHraE" target="_blank" rel="noopener" class="btn-link"><i class="fab fa-youtube"></i> Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- Aletheia -->
-            <div class="featured-card reveal" data-category="finance">
-                <div class="featured-media">
-                    <img src="https://i.imgur.com/bYk93Nt.png" alt="Aletheia financial data API" loading="lazy">
-                </div>
-                <div class="featured-body">
-                    <div class="featured-header">
-                        <span class="project-tag" data-cat="finance">Finance</span>
-                        <span class="project-year">2021</span>
-                    </div>
-                    <h3 class="featured-title">Aletheia</h3>
-                    <p class="featured-desc">A financial data API that ingested and processed over 1.2 million SEC filings and 3.3 million insider trading transactions, serving them through a clean REST interface. Earned a Microsoft-certified Power Platform connector, enabling direct integration with enterprise workflows in Power Apps and Power Automate.</p>
-                    <div class="featured-highlights">
-                        <span>REST API</span>
-                        <span>Financial Data</span>
-                        <span>Power Platform Connector</span>
-                    </div>
-                    <div class="featured-links">
-                        <a href="https://aletheiaapi.com/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tetris AI -->
-            <div class="featured-card reveal" data-category="ai">
-                <div class="featured-media">
-                    <img src="https://i.imgur.com/CCDpuFi.gif" alt="Tetris AI agent playing Tetris" loading="lazy">
-                </div>
-                <div class="featured-body">
-                    <div class="featured-header">
-                        <span class="project-tag" data-cat="ai">AI &amp; ML</span>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <h3 class="featured-title">Tetris AI</h3>
-                    <p class="featured-desc">A reinforcement learning agent trained with Q-Learning to play a simplified version of Tetris. The AI learns optimal piece-placement strategies through thousands of episodes of self-play, gradually improving its ability to clear lines and manage the board.</p>
-                    <div class="featured-highlights">
-                        <span>Q-Learning</span>
-                        <span>Reinforcement Learning</span>
-                        <span>Neural Network</span>
-                        <span>Python</span>
-                    </div>
-                    <div class="featured-links">
-                        <a href="https://github.com/TimHanewich/tetris-ai-mini" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Motorcycle Smart Jacket -->
-            <div class="featured-card reveal" data-category="iot">
-                <div class="featured-media">
-                    <img src="https://i.imgur.com/QXtxmo8.gif" alt="Motorcycle Smart Jacket illuminating during a ride" loading="lazy">
-                </div>
-                <div class="featured-body">
-                    <div class="featured-header">
-                        <span class="project-tag" data-cat="iot">IoT</span>
-                        <span class="project-year">2023</span>
-                    </div>
-                    <h3 class="featured-title">Motorcycle Smart Jacket</h3>
-                    <p class="featured-desc">A GPS-enabled wearable for motorcyclists that improves rider visibility by automatically illuminating LED arrays during high-risk moments &mdash; like hard braking, turning at intersections, or riding at night. Built with embedded microcontrollers and real-time GPS data processing.</p>
-                    <div class="featured-highlights">
-                        <span>GPS</span>
-                        <span>Wearable IoT</span>
-                        <span>Embedded Systems</span>
-                    </div>
-                    <div class="featured-links">
-                        <a href="https://www.youtube.com/watch?v=AxWjqtQHraE" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Watch Video</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Writings -->
-    <section class="writings-section" id="writings">
-        <div class="section-header reveal">
-            <h2 class="section-title">Writings</h2>
-            <p class="section-subtitle">I write about machine learning, robotics, coding projects, and the things I learn along the way.</p>
-            <div class="section-line"></div>
-        </div>
-        <div class="articles-list" id="articlesList">
-            <div class="articles-loading"><i class="fas fa-spinner fa-spin"></i>&ensp;Loading articles from Medium&hellip;</div>
-        </div>
-        <div class="writings-cta">
-            <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" class="btn-primary">
-                <i class="fab fa-medium"></i> View All on Medium
-            </a>
+    <section class="section section-alt" id="writings">
+        <div class="section-inner">
+            <span class="eyebrow reveal">Writings</span>
+            <h2 class="section-title reveal">From the blog</h2>
+            <p class="section-body reveal">I write about machine learning, robotics, coding projects, and the things I learn along the way.</p>
+            <div class="articles-list" id="articlesList">
+                <div class="articles-loading"><i class="fas fa-spinner fa-spin"></i>&ensp;Loading articles&hellip;</div>
+            </div>
+            <div class="writings-cta reveal">
+                <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="fab fa-medium"></i> View All on Medium
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer" id="connect">
-        <div class="footer-links">
-            <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
-            <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
-            <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="https://github.com/timhanewich" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/timhanewich/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/timhanewich" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://timhanewich.medium.com/" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.nuget.org/profiles/TimHanewich" target="_blank" rel="noopener" aria-label="NuGet"><i class="fas fa-cube"></i></a>
+                <a href="https://www.npmjs.com/~timhanewich" target="_blank" rel="noopener" aria-label="npm"><i class="fab fa-npm"></i></a>
+            </div>
+            <p class="footer-copy">&copy; <span id="year"></span> Tim Hanewich</p>
         </div>
-        <p>&copy; <span id="year"></span> Tim Hanewich</p>
     </footer>
 
     <script>
@@ -391,16 +358,6 @@
             });
         });
 
-        // Sidebar: show when hero scrolls out of view
-        const sidebar = document.getElementById('sidebar');
-        const heroEl = document.getElementById('hero');
-        const sidebarObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                sidebar.classList.toggle('visible', !entry.isIntersecting);
-            });
-        }, { threshold: 0.05 });
-        sidebarObserver.observe(heroEl);
-
         // Scroll reveal with IntersectionObserver
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -420,28 +377,19 @@
                 if (data.status !== 'ok') throw new Error('RSS fetch failed');
                 const list = document.getElementById('articlesList');
                 list.innerHTML = '';
-                data.items.slice(0, 10).forEach(item => {
+                data.items.slice(0, 8).forEach(item => {
                     const date = new Date(item.pubDate).toLocaleDateString('en-US', {
                         year: 'numeric', month: 'short', day: 'numeric'
                     });
-                    const tags = (item.categories || []).slice(0, 3)
-                        .map(t => '<span class="article-tag">' + t + '</span>').join('');
-
-                    // Extract first image from description HTML
-                    const imgMatch = (item.description || '').match(/src=["']([^"']+)/);
-                    const thumb = imgMatch ? imgMatch[1] : '';
 
                     const a = document.createElement('a');
                     a.href = item.link;
                     a.target = '_blank';
                     a.rel = 'noopener';
                     a.className = 'article-item reveal';
-                    if (thumb) {
-                        a.style.backgroundImage = 'url(' + thumb + ')';
-                    }
                     a.innerHTML =
-                        '<span class="article-date">' + date + '</span>' +
                         '<div class="article-body">' +
+                            '<span class="article-date">' + date + '</span>' +
                             '<div class="article-title">' + item.title + '</div>' +
                         '</div>' +
                         '<i class="fas fa-arrow-right article-arrow"></i>';
@@ -451,10 +399,8 @@
             })
             .catch(() => {
                 document.getElementById('articlesList').innerHTML =
-                    '<p style="text-align:center;color:var(--text-muted);padding:2rem;">' +
-                    'Could not load articles. Visit <a href="https://timhanewich.medium.com/" target="_blank">Medium</a> directly.</p>';
+                    '<p class="articles-error">Could not load articles. Visit <a href="https://timhanewich.medium.com/" target="_blank">Medium</a> directly.</p>';
             });
-
     </script>
 
 </body>
