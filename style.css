@@ -81,8 +81,12 @@ a:hover {
 .nav-logo {
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--black);
+    color: var(--white);
     letter-spacing: -0.03em;
+}
+
+.nav.scrolled .nav-logo {
+    color: var(--black);
 }
 
 .nav-logo:hover {
@@ -96,7 +100,7 @@ a:hover {
 }
 
 .nav-links a {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: -0.01em;
@@ -105,18 +109,31 @@ a:hover {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--black);
+    color: var(--white);
     opacity: 1;
+}
+
+.nav.scrolled .nav-links a {
+    color: var(--text-secondary);
+}
+
+.nav.scrolled .nav-links a:hover,
+.nav.scrolled .nav-links a.active {
+    color: var(--black);
 }
 
 .nav-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--black);
+    color: var(--white);
     font-size: 1.4rem;
     cursor: pointer;
     z-index: 1001;
+}
+
+.nav.scrolled .nav-toggle {
+    color: var(--black);
 }
 
 /* --- Hero --- */
@@ -127,6 +144,15 @@ a:hover {
     justify-content: center;
     padding: 8rem 3rem 4rem;
     position: relative;
+    background: url('https://i.imgur.com/gxJ1gXz.jpeg') center center / cover no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
 }
 
 .hero-inner {
@@ -137,6 +163,8 @@ a:hover {
     max-width: 1300px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text {
@@ -150,7 +178,7 @@ a:hover {
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .hero-title {
@@ -158,7 +186,7 @@ a:hover {
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -0.04em;
-    color: var(--black);
+    color: var(--white);
 }
 
 .hero-dot {
@@ -167,7 +195,7 @@ a:hover {
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     max-width: 480px;
 }
@@ -198,17 +226,39 @@ a:hover {
     position: absolute;
     bottom: 3rem;
     left: 3rem;
+    z-index: 1;
 }
 
 .hero-social a {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 
 .hero-social a:hover {
-    color: var(--black);
+    color: var(--white);
     opacity: 1;
+}
+
+/* Hero button overrides for dark background */
+.hero .btn-primary {
+    background: var(--white);
+    color: var(--black);
+}
+
+.hero .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--black);
+}
+
+.hero .btn-secondary {
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero .btn-secondary:hover {
+    border-color: var(--white);
+    color: var(--white);
 }
 
 /* --- Buttons --- */
