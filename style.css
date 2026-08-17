@@ -583,8 +583,8 @@ a:hover {
 }
 
 .featured-logo {
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 3.0rem;
+    width: 3.0rem;
     object-fit: contain;
     flex-shrink: 0;
 }
